@@ -2,14 +2,15 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import ScrollExpandMedia from './ui/scroll-expansion-hero';
 import { STATS, INSTITUTE_INFO } from '../data/mockData';
+import { getAssetUrl } from '../lib/utils';
 
 export default function Hero({ onOpenPreRegister }) {
   return (
     <section id="hero" className="relative bg-gradient-to-b from-[#580016] via-[#800020] to-[#4a0314] text-white">
       <ScrollExpandMedia
         mediaType="image"
-        mediaSrc="images/hero_nursing_lab.png"
-        bgImageSrc="images/hero_nursing_lab.png"
+        mediaSrc={getAssetUrl("images/hero_nursing_lab.png")}
+        bgImageSrc={getAssetUrl("images/hero_nursing_lab.png")}
         subtitle="INSTITUTO TÉCNICO EN SALUD"
         title='"SEÑOR DE MAYO"'
         date={INSTITUTE_INFO.accreditation}
@@ -19,7 +20,7 @@ export default function Hero({ onOpenPreRegister }) {
           {/* Centered Large Logo */}
           <div className="flex justify-center -mb-2">
             <img 
-              src="images/logo_senor_de_mayo.png" 
+              src={getAssetUrl("images/logo_senor_de_mayo.png")} 
               alt="Logo Señor de Mayo" 
               className="h-28 sm:h-36 md:h-44 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.7)]"
             />
@@ -52,34 +53,29 @@ export default function Hero({ onOpenPreRegister }) {
               </span>
             </a>
 
-            <a
-              href="#hospitales"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md font-bold text-sm uppercase tracking-wider py-4 px-7 rounded-full border border-white/40 transition-all"
+            <button
+              onClick={onOpenPreRegister}
+              className="inline-flex items-center justify-center gap-2 bg-[#800020] hover:bg-[#580016] text-white font-black text-sm uppercase tracking-wider py-4 px-8 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 border border-white/30 cursor-pointer"
             >
-              Ver Convenios
-            </a>
+              Pre-Inscripciones 2026
+            </button>
           </div>
 
-          {/* Floating Statistics Counter Bar */}
-          <div className="pt-8">
-            <div className="bg-white text-gray-900 border border-gray-100 shadow-2xl rounded-3xl p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              {STATS.map((stat, idx) => (
-                <div 
-                  key={idx} 
-                  className="space-y-1 relative after:hidden md:after:block after:absolute after:top-2 after:bottom-2 after:right-0 after:w-px after:bg-gray-200 last:after:hidden"
-                >
-                  <div className="text-3xl sm:text-4xl font-black text-[#800020] font-heading tracking-tight">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs sm:text-sm font-extrabold text-gray-800 uppercase tracking-wider">
-                    {stat.label}
-                  </div>
-                  <div className="text-[11px] text-gray-500 font-medium line-clamp-1">
-                    {stat.subtext}
-                  </div>
+          {/* Stats Bar */}
+          <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto border-t border-white/20">
+            {STATS.map((stat, idx) => (
+              <div key={idx} className="space-y-1 text-center bg-black/20 p-4 rounded-2xl backdrop-blur-xs border border-white/10">
+                <div className="text-3xl sm:text-4xl font-black text-[#f8e596] font-heading tracking-tight drop-shadow-md">
+                  {stat.value}
                 </div>
-              ))}
-            </div>
+                <div className="text-xs font-bold text-white uppercase tracking-wider">
+                  {stat.label}
+                </div>
+                <div className="text-[11px] text-gray-300 font-normal leading-tight">
+                  {stat.subtext}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </ScrollExpandMedia>

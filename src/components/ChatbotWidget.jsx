@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Bot, User, Sparkles, Phone, RefreshCw } from 'lucide-react';
 import { INSTITUTE_INFO } from '../data/mockData';
+import { getAssetUrl } from '../lib/utils';
 
 export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
   const [messages, setMessages] = useState([
@@ -110,7 +111,7 @@ export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
           <div className="bg-gradient-to-r from-[#580016] via-[#800020] to-[#580016] text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-full border-2 border-[#d4af37] overflow-hidden bg-white/10 p-0.5">
-                <img src="images/nurse_avatar.png" alt="Nurse avatar" className="w-full h-full object-cover rounded-full" />
+                <img src={getAssetUrl("images/nurse_avatar.png")} alt="Nurse avatar" className="w-full h-full object-cover rounded-full" />
               </div>
               <div>
                 <h4 className="font-bold text-sm text-white leading-tight flex items-center gap-1.5">

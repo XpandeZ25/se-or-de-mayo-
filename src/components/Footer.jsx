@@ -1,6 +1,7 @@
 import React from 'react';
 import { Lock, MapPin, Phone, Mail } from 'lucide-react';
 import { INSTITUTE_INFO } from '../data/mockData';
+import { getAssetUrl } from '../lib/utils';
 
 export default function Footer({ onOpenAdmin }) {
   return (
@@ -12,7 +13,7 @@ export default function Footer({ onOpenAdmin }) {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center">
               <img 
-                src="images/logo_senor_de_mayo.png" 
+                src={getAssetUrl("images/logo_senor_de_mayo.png")} 
                 alt="Instituto Técnico Señor de Mayo" 
                 className="h-14 sm:h-16 w-auto object-contain drop-shadow-md"
               />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../lib/utils';
 
 export default function FacilitiesSection() {
   return (
@@ -19,7 +20,7 @@ export default function FacilitiesSection() {
           {/* Left Column: Big Vertical Photo (5 Columns) */}
           <div className="lg:col-span-5 relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 group bg-slate-100 min-h-[420px] lg:min-h-[490px]">
             <img
-              src="images/nursing_practice_lab.png"
+              src={getAssetUrl("images/nursing_practice_lab.png")}
               alt="Práctica en laboratorio de enfermería Señor de Mayo"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -51,7 +52,7 @@ export default function FacilitiesSection() {
             {/* Bottom Row: 1 Wide Photo */}
             <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 group bg-slate-100 h-[220px] sm:h-[245px]">
               <img
-                src="images/hero_nursing_lab.png"
+                src={getAssetUrl("images/hero_nursing_lab.png")}
                 alt="Grupo de estudiantes de enfermería en demostración clínica"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
