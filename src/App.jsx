@@ -27,7 +27,7 @@ export default function App() {
     "Ser reconocidos como el instituto técnico líder en el país, pionero en innovación pedagógica de la salud, acreditado con la máxima excelencia y expandiendo convenios con redes asistenciales de primer nivel."
   );
 
-  const [videoUrl, setVideoUrl] = useState('/videos/experiencia.mp4');
+  const [videoUrl, setVideoUrl] = useState('videos/experiencia.mp4');
   const [newsList, setNewsList] = useState(INITIAL_NEWS);
   const [registrations, setRegistrations] = useState([
     {

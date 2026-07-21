@@ -11,7 +11,7 @@ export default function Header({ onOpenPreRegister, onOpenAdmin }) {
         title="Instituto Técnico Señor de Mayo"
       >
         <img 
-          src="/images/logo_senor_de_mayo.png" 
+          src="images/logo_senor_de_mayo.png" 
           alt="Instituto Técnico Señor de Mayo" 
           className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.85)] filter brightness-110 contrast-105"
         />

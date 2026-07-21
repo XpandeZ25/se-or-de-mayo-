@@ -234,7 +234,7 @@ export default function ScrollExpandMedia({
                       }}
                     >
                       <img
-                        src="/images/logo_senor_de_mayo.png"
+                        src="images/logo_senor_de_mayo.png"
                         alt="Logo Señor de Mayo"
                         className="h-20 sm:h-32 md:h-40 lg:h-48 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.85)] filter brightness-105 mx-auto"
                       />

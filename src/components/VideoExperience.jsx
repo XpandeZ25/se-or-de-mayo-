@@ -84,7 +84,7 @@ export default function VideoExperience({ onOpenPreRegister, videoUrl }) {
                 /* Placeholder before user provides the video */
                 <div className="w-full h-full relative bg-slate-800 flex flex-col items-center justify-center p-6 text-center space-y-4">
                   <img
-                    src="/images/nursing_practice_lab.png"
+                    src="images/nursing_practice_lab.png"
                     alt="Vista previa video estudiantes"
                     className="absolute inset-0 w-full h-full object-cover opacity-60"
                   />

@@ -8,8 +8,8 @@ export default function Hero({ onOpenPreRegister }) {
     <section id="hero" className="relative bg-gradient-to-b from-[#580016] via-[#800020] to-[#4a0314] text-white">
       <ScrollExpandMedia
         mediaType="image"
-        mediaSrc="/images/hero_nursing_lab.png"
-        bgImageSrc="/images/hero_nursing_lab.png"
+        mediaSrc="images/hero_nursing_lab.png"
+        bgImageSrc="images/hero_nursing_lab.png"
         subtitle="INSTITUTO TÉCNICO EN SALUD"
         title='"SEÑOR DE MAYO"'
         date={INSTITUTE_INFO.accreditation}
@@ -19,7 +19,7 @@ export default function Hero({ onOpenPreRegister }) {
           {/* Centered Large Logo */}
           <div className="flex justify-center -mb-2">
             <img 
-              src="/images/logo_senor_de_mayo.png" 
+              src="images/logo_senor_de_mayo.png" 
               alt="Logo Señor de Mayo" 
               className="h-28 sm:h-36 md:h-44 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.7)]"
             />

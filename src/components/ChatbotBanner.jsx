@@ -44,7 +44,7 @@ export default function ChatbotBanner({ onOpenChat }) {
             {/* Center Column: 3D Nurse Advisor Portrait */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 w-full sm:w-[260px] h-[380px] sm:h-[420px] shrink-0">
               <img
-                src="/images/rita_nurse_advisor.png"
+                src="images/rita_nurse_advisor.png"
                 alt="Rita Asesora Académica Señor de Mayo"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />

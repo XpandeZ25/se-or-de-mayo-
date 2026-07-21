@@ -77,7 +77,7 @@ export default function About({ missionText, visionText }) {
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
               <img
-                src="/images/nursing_practice_lab.png"
+                src="images/nursing_practice_lab.png"
                 alt="Estudiantes de enfermería Instituto Señor de Mayo"
                 className="w-full h-[480px] sm:h-[540px] object-cover hover:scale-105 transition-transform duration-700"
               />

@@ -10,35 +10,35 @@ export default function Hospitals() {
       name: "Hospital Arco Iris",
       type: "Tercer Nivel",
       description: "Rotaciones clínicas en uno de los hospitales más modernos y equipados de La Paz.",
-      image: "/images/hospital_arco_iris.jpg"
+      image: "images/hospital_arco_iris.jpg"
     },
     {
       id: 2,
       name: "Hospital Municipal Cotahuma",
       type: "Atención Primaria",
       description: "Prácticas de atención médica primaria e internado asistencial comunitario.",
-      image: "/images/hospital_cotahuma.jpg"
+      image: "images/hospital_cotahuma.jpg"
     },
     {
       id: 3,
       name: "Hospital Municipal La Paz",
       type: "Segundo Nivel",
       description: "Formación práctica intensiva en emergencias, laboratorio y procedimientos clínicos.",
-      image: "/images/hospital_municipal_la_paz.jpg"
+      image: "images/hospital_municipal_la_paz.jpg"
     },
     {
       id: 4,
       name: "Hospital del Tórax",
       type: "Especializado",
       description: "Prácticas avanzadas en unidades de medicina respiratoria y cuidados quirúrgicos.",
-      image: "/images/hospital_del_torax.jpg"
+      image: "images/hospital_del_torax.jpg"
     },
     {
       id: 5,
       name: "Hospital de la Mujer",
       type: "Especializado",
       description: "Especialización en salud materno-infantil, ginecología y neonatología.",
-      image: "/images/hospital_de_la_mujer.jpg"
+      image: "images/hospital_de_la_mujer.jpg"
     }
   ];
 
