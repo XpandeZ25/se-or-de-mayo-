@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+:root {
+  --color-guindo: #800020;
+  --color-guindo-dark: #580016;
+  --color-guindo-light: #9c1532;
+  --color-guindo-bg: #4a0314;
+  --color-gold: #ffffff;
+  --color-gold-light: #ffffff;
+  --color-gold-dark: #ffffff;
+  --color-bg-light: #f8f9fa;
+  --color-bg-white: #ffffff;
+  --color-text-dark: #212529;
+  --color-text-muted: #6c757d;
+  --color-border: #e9ecef;
+
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 36px rgba(128, 0, 32, 0.12);
+  --shadow-gold: 0 8px 24px rgba(255, 255, 255, 0.25);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-guindo);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-guindo-dark);
+}
+
+/* Base Utility Classes */
+.text-guindo {
+  color: var(--color-guindo);
+}
+
+.text-gold {
+  color: #ffffff;
+}
+
+.bg-guindo {
+  background-color: var(--color-guindo);
+}
+
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-guindo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(128, 0, 32, 0.1);
+  color: var(--color-guindo);
+  border: 1px solid rgba(128, 0, 32, 0.25);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-guindo);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--color-guindo);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(128, 0, 32, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-guindo-dark);
+  border-color: var(--color-guindo-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(128, 0, 32, 0.45);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #580016;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(88, 0, 22, 0.25);
+}
+
+.btn-gold:hover {
+  background-color: #800020;
+  transform: translateY(-2px);
+}
+
+/* Hide Scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
