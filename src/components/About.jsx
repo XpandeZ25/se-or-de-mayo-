@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { INSTITUTE_INFO } from '../data/mockData';
 import { getAssetUrl } from '../lib/utils';
 
 export default function About({ missionText, visionText }) {
+  const [showFullHistory, setShowFullHistory] = useState(false);
   const resolutions = [
     "2001 - R.M. 051/2001",
     "2007 - R.M. 100/2007",
@@ -25,6 +26,48 @@ export default function About({ missionText, visionText }) {
           <p className="text-slate-700 text-lg sm:text-xl font-medium leading-relaxed pt-2">
             Fundado el 22 de agosto del 2000, el INSTITUTO TÉCNICO "SEÑOR DE MAYO" ha consolidado su prestigio a través de 25 años de dedicación a la formación de profesionales técnicos en salud. Bajo la Resolución Ministerial R.M. 0040/2025, operamos con plena legalidad y excelencia académica.
           </p>
+
+          <button 
+            onClick={() => setShowFullHistory(!showFullHistory)}
+            className="inline-flex items-center gap-2 mt-4 bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-extrabold text-sm py-2.5 px-5 rounded-xl transition-all cursor-pointer shadow-xs hover:shadow-md"
+          >
+            {showFullHistory ? "Ocultar Historia Completa" : "Ver Historia Completa e Hitos"}
+          </button>
+
+          {showFullHistory && (
+            <div className="mt-6 bg-[#fffbfb] border border-[#800020]/15 rounded-3xl p-6 sm:p-8 space-y-6 text-slate-700 shadow-inner animate-in fade-in slide-in-from-top-4 duration-300">
+              <h3 className="text-xl sm:text-2xl font-black text-[#800020] font-heading">
+                Reseña Histórica e Hitos Institucionales
+              </h3>
+              
+              <div className="space-y-4 text-sm sm:text-base font-medium leading-relaxed">
+                <p>
+                  El <strong>Instituto Técnico “Señor de Mayo”</strong> fue fundado el 22 de agosto de 2000, iniciando sus actividades con la formación de Auxiliares de Enfermería. El 7 de febrero de 2001, el Ministerio de Educación, Cultura y Deportes autorizó su funcionamiento mediante la <strong>Resolución Ministerial Nº 051/2001</strong>. Posteriormente, la autorización fue renovada mediante la <strong>Resolución Ministerial Nº 100/07</strong>, con fecha 8 de febrero de 2007. Hasta la fecha de esa renovación se habían titulado 834 profesionales como Auxiliares de Enfermería.
+                </p>
+                <p>
+                  El Instituto Técnico "Señor de Mayo", en la carrera de Enfermería (nivel Técnico Medio), fue inicialmente autorizado mediante la <strong>Resolución Ministerial Nº 748/12</strong>, de fecha 24 de octubre de 2012, por un período de vigencia de seis años. Posteriormente, su funcionamiento fue ratificado mediante la <strong>Resolución Ministerial Nº 1258/18</strong>, de fecha 20 de diciembre de 2018. La última ratificación registrada corresponde a la <strong>Resolución Ministerial Nº 0040/2025</strong>, emitida el 28 de enero de 2025. Hasta la fecha cuenta con 34 promociones y un total de 873 egresados y titulados de la carrera de Enfermería, nivel Técnico Medio.
+                </p>
+                <p>
+                  En 2025 celebramos con orgullo nuestras <strong>Bodas de Plata: 25 años</strong> dedicados a la formación de Técnicos Medios en Enfermería. Este aniversario refleja nuestro compromiso sostenido con la juventud y la salud de la comunidad, la excelencia académica y la sólida formación práctica que nos distingue de otros formadores en salud. Agradecemos a docentes, estudiantes, egresados y aliados por su confianza y contribución a este legado.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                <div>
+                  <span className="font-extrabold text-slate-800 block">Ubicación Central:</span>
+                  <span className="text-slate-600">Calle Illampu Nº 614, esquina Plaza Eguino, zona El Rosario, La Paz.</span>
+                </div>
+                <div>
+                  <span className="font-extrabold text-slate-800 block">Autoridades:</span>
+                  <ul className="text-slate-600 list-disc list-inside">
+                    <li>Gerencia General: Lic. María del Rosario Revollo Paz</li>
+                    <li>Dirección General: Lic. Olga Rosmery Yujra Magne</li>
+                    <li>Coordinación: Lic. Dayan Lilian Miranda Callisaya</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Main Grid Layout */}
