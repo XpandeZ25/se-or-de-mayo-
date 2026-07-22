@@ -34,7 +34,7 @@ export default function ChatbotBanner({ onOpenChat }) {
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
                 <span className="text-slate-800 font-extrabold text-sm sm:text-base">
-                  Horario L-V: 08:30-12:30 y 14:30-22:00
+                  Horario de lunes a viernes: 08:30-12:30 y 14:30-22:00
                 </span>
               </div>
             </div>
