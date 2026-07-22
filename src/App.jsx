@@ -21,10 +21,10 @@ import { INITIAL_NEWS } from './data/mockData';
 export default function App() {
   // CMS State
   const [missionText, setMissionText] = useState(
-    "Formar profesionales Técnicos Medios en Enfermería altamente calificados, con profundos principios éticos, destrezas clínicas avanzadas y un compromiso inquebrantable con la salud de Bolivia."
+    "El INSTITUTO TÉCNICO \"SEÑOR DE MAYO\" se dedica a la formación continua del personal de salud mediante la investigación y la transmisión del conocimiento para el beneficio de la sociedad. Respaldado por la experiencia institucional y un sólido equipo docente, formando profesionales en Enfermería a nivel Técnico Medio comprometidos con el fortalecimiento del sistema de salud boliviano. Promovemos una enseñanza integral que integra saberes científicos e indígenas, garantiza atención de calidad en contextos de salud y enfermedad, y potencia el servicio responsable y solidario a la comunidad."
   );
   const [visionText, setVisionText] = useState(
-    "Ser reconocidos como el instituto técnico líder en el país, pionero en innovación pedagógica de la salud, acreditado con la máxima excelencia y expandiendo convenios con redes asistenciales de primer nivel."
+    "El INSTITUTO TÉCNICO \"SEÑOR DE MAYO\" será reconocido por su identidad humanística en la educación, fomentando la vocación de servicio social. Se distinguirá por la excelencia de su planta docente y de los profesionales que forma, ambos comprometidos con la salud y guiados por un profundo sentido ético y de servicio. Asimismo, será un referente nacional en enseñanza, práctica y acción social frente a los problemas de salud que afectan a la población boliviana, ofreciendo soluciones basadas en investigación pertinente, atención de calidad en todos los niveles y una visión humanista de la sociedad."
   );
 
   const [videoUrl, setVideoUrl] = useState('videos/experiencia.mp4');

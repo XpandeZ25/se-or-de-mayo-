@@ -38,17 +38,17 @@ export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
     if (q.includes('requisito') || q.includes('documento') || q.includes('inscrip')) {
       return "¡Hola! Para inscribirte en el Técnico Medio en Enfermería necesitas: 1) Fotocopia de Cédula de Identidad, 2) Certificado de Nacimiento, 3) Título de Bachiller (fotocopia legalizada) y 4) 4 fotografías 4x4. Te recomiendo acercarte a nuestras oficinas en Calle Illampu N° 614 para una asesoría personalizada. ¿Necesitas saber algo más?";
     } else if (q.includes('donde') || q.includes('quedan') || q.includes('ubicacion') || q.includes('direccion') || q.includes('llegar')) {
-      return "Nuestra sede central queda en la ciudad de La Paz: Calle Illampu N° 614 (entre Graneros y Santa Cruz). Atendemos de Lunes a Viernes de 08:00 a 18:30 y Sábados de 09:00 a 13:00.";
+      return "Nuestra Sede Central queda en la ciudad de La Paz: Calle Illampu N° 614 (esquina Plaza Eguino, zona El Rosario). Atendemos de Lunes a Viernes de 08:30 a 12:30 y de 14:30 a 22:00. No atendemos los sábados.";
     } else if (q.includes('dura') || q.includes('tiempo') || q.includes('duracion') || q.includes('semestre') || q.includes('año')) {
       return "La carrera de Técnico Medio en Enfermería tiene una duración de 2 años (4 semestres académicos) contemplando un total de 2,400 horas de formación teórica, práctica y laboratorio.";
     } else if (q.includes('practica') || q.includes('hospital') || q.includes('internado') || q.includes('convenio')) {
       return "Nuestras prácticas se realizan en hospitales de prestigio como: Hospital Municipal Cotahuma, Hospital La Paz, Hospital de Clínicas, Hospital del Niño, Hospital de la Mujer, Hospital del Norte y centros del SEDES.";
     } else if (q.includes('costo') || q.includes('precio') || q.includes('mensualidad') || q.includes('cuota') || q.includes('pago')) {
-      return "Los costos de inscripción y mensualidades varían según la modalidad y promociones vigentes. Te sugerimos consultar directamente en ventanilla de recepción (Calle Illampu 614) o comunicarte al teléfono +591 2 2456789.";
+      return "Los costos de inscripción y mensualidades varían según la modalidad y promociones vigentes. Te sugerimos consultar directamente en ventanilla de recepción (Calle Illampu 614) o comunicarte a los teléfonos 2450031 o 72565773.";
     } else if (q.includes('resolucion') || q.includes('acreditacion') || q.includes('ministerio') || q.includes('titulo')) {
-      return "Contamos con pleno respaldo ministerial bajo la Resolución Ministerial N° 0049/2025 emitida por el Ministerio de Educación de Bolivia, otorgando Título Profesional en Provisión Nacional.";
+      return "Contamos con pleno respaldo ministerial bajo la Resolución Ministerial R.M. 0040/2025 emitida por el Ministerio de Educación de Bolivia, otorgando Título Profesional en Provisión Nacional.";
     } else {
-      return "Gracias por tu consulta. Para brindarte una respuesta más detallada, puedes llamarnos directamente al +591 2 2456789 o visitar nuestra sede en Calle Illampu N° 614. ¡Con gusto te atenderemos!";
+      return "Gracias por tu consulta. Para brindarte una respuesta más detallada, puedes llamarnos directamente al 2450031 - 72565773 o visitar nuestra sede en Calle Illampu N° 614. ¡Con gusto te atenderemos!";
     }
   };
 

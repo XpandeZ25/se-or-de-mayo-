@@ -1,53 +1,67 @@
 export const INSTITUTE_INFO = {
-  name: "Instituto Técnico Señor de Mayo",
+  name: "INSTITUTO TÉCNICO \"SEÑOR DE MAYO\"",
   anniversary: "25 Años",
-  jubileeYear: "1999 - 2026",
-  accreditation: "Resolución Ministerial R.M. N° 0677/2023",
-  address: "Calle Illampu N° 614 (Entre Graneros y Sta. Cruz)",
+  jubileeYear: "2000 - 2025",
+  accreditation: "Resolución Ministerial R.M. 0040/2025",
+  address: "Calle Illampu N° 614 (Esquina Plaza Eguino, Zona El Rosario)",
   city: "La Paz, Bolivia",
-  phones: ["+591 2 2456789", "+591 76543210"],
-  whatsapp: "59176543210",
+  phones: ["2450031", "72565773"],
+  whatsapp: "59172565773",
   email: "contacto@senordemayo.edu.bo",
-  hours: "Lunes a Viernes: 08:00 - 18:30 | Sábados: 09:00 - 13:00",
+  hours: "Lunes a Viernes: 08:30 a 12:30 | 14:30 a 22:00 (Sábado cerrado)",
   careerName: "Técnico Medio en Enfermería",
   duration: "2 Años (4 Semestres) / 2,400 Horas Académicas",
   degree: "Título Profesional a Nivel Técnico Medio"
 };
 
 export const STATS = [
-  { value: "+25", label: "Años de Trayectoria", subtext: "Formando líderes en salud desde 1999" },
+  { value: "+25", label: "Años de Trayectoria", subtext: "Formando líderes en salud desde el 2000" },
   { value: "10+", label: "Convenios de Salud", subtext: "Prácticas en hospitales de 1er, 2do y 3er nivel" },
-  { value: "100%", label: "Acreditación Ministerial", subtext: "Resolución Ministerial R.M. N° 0677/2023" }
+  { value: "100%", label: "Acreditación Ministerial", subtext: "Resolución Ministerial R.M. 0040/2025" }
 ];
 
 export const RESOLUTIONS = [
   {
-    year: "1999",
-    title: "Fundación Institucional",
-    resolutionCode: "Fundación 1999",
-    description: "Inauguración oficial de actividades académicas e incubación del proyecto educativo en salud.",
-    detail: "Fundado con el firme propósito de democratizar la educación técnica en enfermería, formando profesionales con alta vocación de servicio."
+    year: "2000",
+    title: "Fundación del Instituto",
+    resolutionCode: "Fundado el 22 de agosto del 2000",
+    description: "Inició sus actividades con la formación de Auxiliares de Enfermería.",
+    detail: "Establecido en La Paz con el propósito de formar profesionales técnicos en enfermería con calidad y responsabilidad social."
   },
   {
-    year: "2005",
-    title: "Acreditación y Homologación Ministerial",
-    resolutionCode: "R.M. N° 484/05",
-    description: "Homologación oficial de planes y programas de estudio a nivel Técnico Medio por el Ministerio de Educación.",
-    detail: "Se consolida la estructura curricular adaptada a las nuevas normas del Sistema Nacional de Salud del Estado Plurinacional de Bolivia."
+    year: "2001",
+    title: "Autorización de Funcionamiento",
+    resolutionCode: "R.M. 051/2001",
+    description: "El Ministerio de Educación autoriza oficialmente su funcionamiento.",
+    detail: "Otorgada el 7 de febrero de 2001 por el Ministerio de Educación, Cultura y Deportes de Bolivia."
   },
   {
-    year: "2015",
-    title: "Expansión de Convenios Hospitalarios",
-    resolutionCode: "Convenios SEDES",
-    description: "Firma de alianzas estratégicas con la red de hospitales gubernamentales y centros asistenciales de 3er nivel.",
-    detail: "Equipamiento de laboratorios de simulación clínica y firma de internado rotatorio asistido en red asistencial de salud."
+    year: "2007",
+    title: "Renovación de Autorización",
+    resolutionCode: "R.M. 100/2007",
+    description: "Renovación oficial de la autorización y consolidación institucional.",
+    detail: "Otorgada el 8 de febrero de 2007, registrando 834 egresados titulados hasta esa fecha."
   },
   {
-    year: "2023",
-    title: "Resolución Ministerial R.M. N° 0677/2023",
-    resolutionCode: "R.M. N° 0677/2023",
-    description: "Reacreditación quinquenal con máxima calificación académica y aprobación de la nueva malla curricular de 2400 horas.",
-    detail: "Aprobación de la resolución ministerial oficial del Ministerio de Educación que certifica el Título Profesional en Provisión Nacional."
+    year: "2012",
+    title: "Carrera de Enfermería (Técnico Medio)",
+    resolutionCode: "R.M. 748/2012",
+    description: "Autorización oficial para impartir la carrera a nivel Técnico Medio.",
+    detail: "Emitida el 24 de octubre de 2012 por el Ministerio de Educación."
+  },
+  {
+    year: "2018",
+    title: "Ratificación de Funcionamiento",
+    resolutionCode: "R.M. 1258/2018",
+    description: "Ratificación oficial de funcionamiento del programa curricular.",
+    detail: "Emitida el 20 de diciembre de 2018."
+  },
+  {
+    year: "2025",
+    title: "Ratificación y Bodas de Plata",
+    resolutionCode: "R.M. 0040/2025",
+    description: "Última ratificación emitida el 28 de enero de 2025, certificando la excelencia académica.",
+    detail: "Llegamos a 25 años de trayectoria con 34 promociones y 873 egresados y titulados en la carrera de Enfermería."
   }
 ];
 
@@ -99,7 +113,7 @@ export const AUTHORITIES = [
   },
   {
     role: "Dirección General",
-    name: "Lic. Olga Rosemary Yujra Magne",
+    name: "Lic. Olga Rosmery Yujra Magne",
     description: "Encargada de la visión curricular, rigurosidad académica y acreditación ministerial ante el Estado.",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
   },
@@ -122,7 +136,7 @@ export const INITIAL_NEWS = [
   },
   {
     id: 2,
-    title: "Renovación R.M. N° 0677/2023 Acreditación Ministerial",
+    title: "Renovación R.M. 0040/2025 Acreditación Ministerial",
     category: "Institucional",
     date: "02 Mayo 2026",
     summary: "Conmemoramos un cuarto de siglo formando a los mejores profesionales en salud de Bolivia.",

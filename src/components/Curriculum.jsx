@@ -3,10 +3,10 @@ import { Check, Clock, BookOpen } from 'lucide-react';
 
 export default function Curriculum({ onOpenPreRegister }) {
   const tableData = [
-    { label: "Carrera", value: "Técnico en Enfermería" },
+    { label: "Carrera", value: "Enfermería" },
     { label: "Nivel", value: "Técnico Medio" },
-    { label: "Duración", value: "2 años (anual)" },
-    { label: "Modalidad", value: "70% presencial y 30% teórico" },
+    { label: "Duración", value: "2 años / 24 meses" },
+    { label: "Modalidad", value: "Presencial" },
     { label: "Carga Horaria", value: "2.400 horas académicas" }
   ];
 

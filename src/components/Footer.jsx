@@ -20,7 +20,7 @@ export default function Footer({ onOpenAdmin }) {
             </div>
 
             <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-              Formando profesionales de excelencia en salud con alta vocación de servicio desde 1999.
+              Formando profesionales de excelencia en salud con alta vocación de servicio desde el 22 de agosto del 2000.
             </p>
           </div>
 

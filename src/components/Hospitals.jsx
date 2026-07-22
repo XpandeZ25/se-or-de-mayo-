@@ -29,7 +29,7 @@ export default function Hospitals() {
     },
     {
       id: 4,
-      name: "Hospital del Tórax",
+      name: "Instituto Nacional de Tórax",
       type: "Especializado",
       description: "Prácticas avanzadas en unidades de medicina respiratoria y cuidados quirúrgicos.",
       image: getAssetUrl("images/hospital_del_torax.jpg")

@@ -4,16 +4,11 @@ import { getAssetUrl } from '../lib/utils';
 
 export default function About({ missionText, visionText }) {
   const resolutions = [
-    "1999 - R.M. 290/99",
-    "2005 - R.M. 484/05",
-    "2010 - R.M. 530/2010",
-    "2014 - R.M. 124/2014",
-    "2014 - R.M. 975/2014",
-    "2015 - R.A. 155/2015",
-    "2017 - R.M. 2485/2017",
-    "2019 - R.M. 0565/2019",
-    "2020 - R.A. 0001/2020",
-    "2023 - R.M. 0677/2023"
+    "2001 - R.M. 051/2001",
+    "2007 - R.M. 100/2007",
+    "2012 - R.M. 748/2012",
+    "2018 - R.M. 1258/2018",
+    "2025 - R.M. 0040/2025"
   ];
 
   return (
@@ -28,7 +23,7 @@ export default function About({ missionText, visionText }) {
             ¿Quiénes somos?
           </h2>
           <p className="text-slate-700 text-lg sm:text-xl font-medium leading-relaxed pt-2">
-            Fundado en 1999, el Instituto Técnico Señor de Mayo ha consolidado su prestigio a través de décadas de dedicación a la formación de cuadros técnicos en salud. Bajo la Resolución Ministerial R.M. N° 0677/2023, operamos con plena legalidad y compromiso académico.
+            Fundado el 22 de agosto del 2000, el INSTITUTO TÉCNICO "SEÑOR DE MAYO" ha consolidado su prestigio a través de 25 años de dedicación a la formación de profesionales técnicos en salud. Bajo la Resolución Ministerial R.M. 0040/2025, operamos con plena legalidad y excelencia académica.
           </p>
         </div>
 
