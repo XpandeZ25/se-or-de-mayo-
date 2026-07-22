@@ -16,7 +16,7 @@ export const INSTITUTE_INFO = {
 
 export const STATS = [
   { value: "+25", label: "Años de Trayectoria", subtext: "Formando líderes en salud desde el 2000" },
-  { value: "10+", label: "Convenios de Salud", subtext: "Prácticas en hospitales de 1er, 2do y 3er nivel" },
+  { value: "+10", label: "Convenios de Salud", subtext: "Prácticas en hospitales de 1er, 2do y 3er nivel" },
   { value: "100%", label: "Acreditación Ministerial", subtext: "Resolución Ministerial R.M. 0040/2025" }
 ];
 
