@@ -34,7 +34,7 @@ export default function Hero({ onOpenPreRegister }) {
               "SEÑOR DE MAYO"
             </h1>
             <p className="text-xl sm:text-2xl text-white font-extrabold max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
-              Formando profesionales de la salud con excelencia y vocación.
+              Formando profesionales en salud con excelencia y vocación.
             </p>
             <p className="text-sm sm:text-base text-white/90 max-w-2xl mx-auto font-medium">
               Programa académico de 2 años con acreditación ministerial ({INSTITUTE_INFO.accreditation}) e internado rotatorio en los mejores hospitales.
