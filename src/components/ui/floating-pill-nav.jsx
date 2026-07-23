@@ -8,7 +8,7 @@ export default function FloatingPillNav({ onOpenPreRegister, onOpenAdmin }) {
     { name: 'Inicio', href: '#hero' },
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Carrera', href: '#carrera' },
-    { name: 'Malla', href: '#carrera' },
+    { name: 'Malla Curricular', href: '#malla' },
     { name: 'Instalaciones', href: '#instalaciones' },
     { name: 'Contacto', href: '#contacto' },
   ];
