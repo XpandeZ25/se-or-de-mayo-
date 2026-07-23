@@ -124,7 +124,7 @@ export default function About({ missionText, visionText }) {
               {/* Overlapping Bottom-Left Floating Badge */}
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 sm:p-7 rounded-3xl shadow-2xl border-l-4 border-l-[#800020] border border-slate-100 z-20 min-w-[190px]">
                 <div className="text-3xl sm:text-4xl font-bold text-[#800020] font-heading tracking-tight">
-                  25+
+                  +25
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mt-1">
                   Años educando
