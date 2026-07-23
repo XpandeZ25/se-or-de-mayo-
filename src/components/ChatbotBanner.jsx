@@ -14,7 +14,7 @@ export default function ChatbotBanner({ onOpenChat }) {
                 Resuelve tus dudas al instante
               </h2>
               <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed pt-1">
-                Nuestra asesora académica Gabriela está disponible para ayudarte con información sobre requisitos, costos y horarios.
+                Nuestra asesora académica Maya está disponible para ayudarte con información sobre requisitos, costos y horarios.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ export default function ChatbotBanner({ onOpenChat }) {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 w-full sm:w-[260px] h-[380px] sm:h-[420px] shrink-0">
               <img
                 src={getAssetUrl("images/rita_nurse_advisor.png")}
-                alt="Gabriela Asesora Académica Señor de Mayo"
+                alt="Maya Asesora Académica Señor de Mayo"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -59,11 +59,11 @@ export default function ChatbotBanner({ onOpenChat }) {
               {/* Header Bar */}
               <div className="bg-[#800020] text-white p-4 flex items-center gap-3 border-b border-white/10">
                 <div className="w-9 h-9 rounded-full bg-white text-[#800020] font-bold text-base flex items-center justify-center shadow-md shrink-0">
-                  G
+                  M
                 </div>
                 <div>
                   <div className="font-bold text-sm sm:text-base leading-tight">
-                    Gabriela - Asesora Académica
+                    Maya - Asesora Académica
                   </div>
                   <div className="text-[11px] text-white/90 font-medium flex items-center gap-1.5 mt-0.5">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> En línea ahora
@@ -75,7 +75,7 @@ export default function ChatbotBanner({ onOpenChat }) {
               <div className="p-4 sm:p-5 space-y-4 flex-1 flex flex-col justify-between">
                 {/* Nurse Speech Bubble */}
                 <div className="bg-slate-100 p-4 rounded-2xl text-xs sm:text-sm text-slate-700 font-medium leading-relaxed shadow-xs">
-                  ¡Hola! Soy Gabriela. ¿Tienes alguna duda sobre nuestra carrera de Enfermería? Haz clic en una opción o escríbeme.
+                  ¡Hola! Soy Maya. ¿Tienes alguna duda sobre nuestra carrera de Enfermería? Haz clic en una opción o escríbeme.
                 </div>
 
                 {/* Quick Action Pill Buttons */}
