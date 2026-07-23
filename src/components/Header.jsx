@@ -89,7 +89,15 @@ export default function Header({ onOpenPreRegister, onOpenAdmin }) {
               <a
                 key={item.name}
                 href={item.href}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  const targetId = item.href.substring(1);
+                  const element = document.getElementById(targetId);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="py-2.5 text-slate-750 hover:text-[#800020] font-bold text-xs border-b border-slate-100 last:border-b-0 transition-colors uppercase tracking-widest"
               >
                 {item.name}

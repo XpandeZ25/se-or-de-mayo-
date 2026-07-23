@@ -47,7 +47,15 @@ export default function FloatingPillNav({ onOpenPreRegister, onOpenAdmin }) {
             <a
               key={item.name}
               href={item.href}
-              onClick={() => setActiveTab(item.name)}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveTab(item.name);
+                const targetId = item.href.substring(1);
+                const element = document.getElementById(targetId);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className={`relative px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold tracking-tight rounded-full transition-all duration-300 ${
                 isActive
                   ? 'text-gray-900 bg-white/70 shadow-md'
