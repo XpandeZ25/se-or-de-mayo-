@@ -11,7 +11,7 @@ export default function Hero({ onOpenPreRegister }) {
         mediaType="image"
         mediaSrc={getAssetUrl("images/hero_nursing_lab.png")}
         bgImageSrc={getAssetUrl("images/hero_nursing_lab.png")}
-        subtitle="INSTITUTO TÉCNICO EN SALUD"
+        subtitle="INSTITUTO TÉCNICO"
         title='"SEÑOR DE MAYO"'
         date={INSTITUTE_INFO.accreditation}
         scrollToExpand="Desliza para explorar"
@@ -27,13 +27,13 @@ export default function Hero({ onOpenPreRegister }) {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-2xl sm:text-4xl font-extrabold !text-white font-heading leading-tight uppercase tracking-wider drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ color: '#ffffff' }}>
-              INSTITUTO TÉCNICO EN SALUD
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold !text-white font-heading leading-tight uppercase tracking-wider drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ color: '#ffffff' }}>
+              INSTITUTO TÉCNICO
             </h2>
-            <h1 className="text-4xl sm:text-6xl font-black !text-white font-heading leading-tight uppercase tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ color: '#ffffff' }}>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold !text-white font-heading leading-tight uppercase tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ color: '#ffffff' }}>
               "SEÑOR DE MAYO"
             </h1>
-            <p className="text-xl sm:text-2xl text-white font-extrabold max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
+            <p className="text-lg sm:text-xl text-white font-bold max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
               Formando profesionales en salud con excelencia y vocación.
             </p>
             <p className="text-sm sm:text-base text-white/90 max-w-2xl mx-auto font-medium">
@@ -45,7 +45,7 @@ export default function Hero({ onOpenPreRegister }) {
           <div className="flex flex-wrap justify-center items-center gap-4">
             <a
               href="#carrera"
-              className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-[#800020] font-black text-sm uppercase tracking-wider py-4 px-8 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 border border-white/40"
+              className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-[#800020] font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 border border-white/40"
             >
               Explorar Carrera 
               <span className="w-6 h-6 rounded-full bg-[#800020]/15 flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function Hero({ onOpenPreRegister }) {
 
             <button
               onClick={onOpenPreRegister}
-              className="inline-flex items-center justify-center gap-2 bg-[#800020] hover:bg-[#580016] text-white font-black text-sm uppercase tracking-wider py-4 px-8 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 border border-white/30 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-[#800020] hover:bg-[#580016] text-white font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 border border-white/30 cursor-pointer"
             >
               Pre-Inscripciones 2026
             </button>
@@ -65,7 +65,7 @@ export default function Hero({ onOpenPreRegister }) {
           <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto border-t border-white/20">
             {STATS.map((stat, idx) => (
               <div key={idx} className="space-y-1 text-center bg-black/20 p-4 rounded-2xl backdrop-blur-xs border border-white/10">
-                <div className="text-3xl sm:text-4xl font-black text-[#f8e596] font-heading tracking-tight drop-shadow-md">
+                <div className="text-2xl sm:text-3xl font-bold text-[#f8e596] font-heading tracking-tight drop-shadow-md">
                   {stat.value}
                 </div>
                 <div className="text-xs font-bold text-white uppercase tracking-wider">

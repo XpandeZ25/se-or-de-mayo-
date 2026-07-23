@@ -276,13 +276,13 @@ export default function ScrollExpandMedia({
               >
 
                 <motion.h2
-                  className="text-2xl sm:text-4xl lg:text-5xl font-extrabold !text-white uppercase tracking-wider font-heading transition-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+                  className="text-xl sm:text-2xl lg:text-3.5xl font-extrabold !text-white uppercase tracking-wider font-heading transition-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
                   style={{ color: '#ffffff', transform: `translateX(-${textTranslateX}vw)` }}
                 >
                   {subtitle || firstWord}
                 </motion.h2>
                 <motion.h1
-                  className="text-3xl sm:text-5xl lg:text-7xl font-black text-center !text-white uppercase tracking-tight font-heading transition-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+                  className="text-2xl sm:text-4xl lg:text-5.5xl font-extrabold text-center !text-white uppercase tracking-tight font-heading transition-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
                   style={{ color: '#ffffff', transform: `translateX(${textTranslateX}vw)` }}
                 >
                   {title || restOfTitle}

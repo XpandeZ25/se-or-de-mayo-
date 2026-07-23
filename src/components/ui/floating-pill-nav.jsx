@@ -38,7 +38,7 @@ export default function FloatingPillNav({ onOpenPreRegister, onOpenAdmin }) {
   }, []);
 
   return (
-    <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center pointer-events-auto">
+    <nav className="hidden lg:flex fixed top-5 left-1/2 -translate-x-1/2 z-50 items-center justify-center pointer-events-auto">
       <div className="relative flex items-center bg-[#e2e8f0]/90 backdrop-blur-xl border border-white/70 shadow-2xl rounded-full p-1.5 sm:p-2 gap-1 sm:gap-2">
         {navItems.map((item) => {
           const isActive = activeTab === item.name;
@@ -48,7 +48,7 @@ export default function FloatingPillNav({ onOpenPreRegister, onOpenAdmin }) {
               key={item.name}
               href={item.href}
               onClick={() => setActiveTab(item.name)}
-              className={`relative px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-black tracking-tight rounded-full transition-all duration-300 ${
+              className={`relative px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold tracking-tight rounded-full transition-all duration-300 ${
                 isActive
                   ? 'text-gray-900 bg-white/70 shadow-md'
                   : 'text-gray-700 hover:text-gray-900 hover:bg-white/40'

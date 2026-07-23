@@ -8,10 +8,10 @@ export default function LocationContact() {
       <div className="max-w-7xl mx-auto px-4 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight font-heading">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight font-heading">
             Visítanos
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
             Te esperamos en nuestra sede central en La Paz para recibir una atención personalizada.
           </p>
         </div>

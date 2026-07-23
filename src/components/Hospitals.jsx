@@ -61,10 +61,10 @@ export default function Hospitals() {
           {/* Left Column: Title, Subtitle & Hospital Pills */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-4xl sm:text-6xl font-black text-[#1e1b4b] tracking-tight font-heading">
+              <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold text-[#1e1b4b] tracking-tight font-heading">
                 Prácticas y Convenios
               </h2>
-              <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+              <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed">
                 Garantizamos tu formación práctica mediante alianzas estratégicas con las instituciones de salud más importantes del país.
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function Hospitals() {
                   <button
                     key={hospital.id}
                     onClick={() => setActiveIndex(idx)}
-                    className={`py-3.5 px-5 rounded-2xl text-left font-black text-xs sm:text-sm tracking-tight transition-all duration-300 cursor-pointer border ${
+                    className={`py-3.5 px-5 rounded-2xl text-left font-bold text-xs sm:text-sm tracking-tight transition-all duration-300 cursor-pointer border ${
                       isActive
                         ? 'bg-[#800020] text-white border-[#800020] shadow-lg transform scale-[1.02]'
                         : 'bg-[#f1f5f9] hover:bg-[#800020]/10 hover:text-[#800020] text-slate-800 border-slate-200/80'
@@ -123,7 +123,7 @@ export default function Hospitals() {
 
               {/* Bottom Content Overlay */}
               <div className="absolute bottom-6 left-6 right-6 z-20 space-y-1.5 text-white">
-                <h3 className="text-2xl sm:text-3xl font-black font-heading tracking-tight drop-shadow-md">
+                <h3 className="text-xl sm:text-2xl font-bold font-heading tracking-tight drop-shadow-md">
                   {activeHospital.name}
                 </h3>
                 <p className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed max-w-md drop-shadow-sm">

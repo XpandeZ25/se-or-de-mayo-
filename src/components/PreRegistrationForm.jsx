@@ -41,7 +41,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
           {/* Left Dark Maroon Panel */}
           <div className="lg:col-span-5 bg-[#580016] text-white p-8 sm:p-10 flex flex-col justify-between space-y-8">
             <div className="space-y-6">
-              <h3 className="text-2xl sm:text-3xl font-black font-heading leading-tight">
+              <h3 className="text-xl sm:text-2xl font-bold font-heading leading-tight">
                 Pre-Inscríbete en Señor de Mayo
               </h3>
 
@@ -76,7 +76,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
             {!submittedCode ? (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                  <label className="block text-xs font-semibold text-gray-600 mb-1">
                     Nombre Completo *
                   </label>
                   <input
@@ -91,7 +91,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">
                       Celular / WhatsApp *
                     </label>
                     <input
@@ -105,7 +105,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">
                       Correo Electrónico
                     </label>
                     <input
@@ -119,7 +119,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                  <label className="block text-xs font-semibold text-gray-600 mb-1">
                     Turno de Interés
                   </label>
                   <select
@@ -135,7 +135,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#580016] hover:bg-[#800020] text-white font-extrabold text-xs uppercase tracking-wider py-4 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 mt-2"
+                  className="w-full bg-[#580016] hover:bg-[#800020] text-white font-bold text-xs uppercase tracking-wider py-4 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 mt-2"
                 >
                   <Send className="w-4 h-4" /> Enviar Pre-Inscripción
                 </button>
@@ -154,7 +154,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#800020] bg-[#800020]/10 px-3 py-1 rounded-full">
                     Pre-Inscripción Recepcionada
                   </span>
-                  <h4 className="text-2xl font-black text-gray-900 mt-2">¡Gracias, {formData.fullName}!</h4>
+                  <h4 className="text-xl font-bold text-gray-900 mt-2">¡Gracias, {formData.fullName}!</h4>
                   <p className="text-xs text-gray-600 max-w-sm mx-auto mt-1">
                     Un asesor de admisiones te contactará en breve. Presenta tu código en ventanilla para confirmar tu reserva.
                   </p>
@@ -162,7 +162,7 @@ export default function PreRegistrationForm({ onRegisterSubmit }) {
 
                 <div className="p-3 bg-gray-50 border-2 border-dashed border-[#800020]/30 rounded-2xl max-w-xs mx-auto">
                   <div className="text-[10px] font-semibold text-gray-500 uppercase">Código de Ficha:</div>
-                  <div className="text-xl font-black text-[#800020] tracking-widest">{submittedCode}</div>
+                  <div className="text-lg font-bold text-[#800020] tracking-widest">{submittedCode}</div>
                 </div>
 
                 <button

@@ -10,10 +10,10 @@ export default function ChatbotBanner({ onOpenChat }) {
           {/* Left Column: Title, Subtitle & Check Cards (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1e1b4b] tracking-tight font-heading leading-tight">
+              <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold text-[#1e1b4b] tracking-tight font-heading leading-tight">
                 Resuelve tus dudas al instante
               </h2>
-              <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed pt-1">
+              <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed pt-1">
                 Nuestra asesora académica Gabriela está disponible para ayudarte con información sobre requisitos, costos y horarios.
               </p>
             </div>
@@ -24,7 +24,7 @@ export default function ChatbotBanner({ onOpenChat }) {
                 <div className="w-5 h-5 rounded-full bg-[#0d9488]/15 text-[#0d9488] flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span className="text-slate-800 font-extrabold text-sm sm:text-base">
+                <span className="text-slate-800 font-bold text-xs sm:text-sm">
                   Atención personalizada inmediata
                 </span>
               </div>
@@ -33,7 +33,7 @@ export default function ChatbotBanner({ onOpenChat }) {
                 <div className="w-5 h-5 rounded-full bg-[#0d9488]/15 text-[#0d9488] flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span className="text-slate-800 font-extrabold text-sm sm:text-base">
+                <span className="text-slate-800 font-bold text-xs sm:text-sm">
                   Horario de lunes a viernes: 08:30-12:30 y 14:30-22:00
                 </span>
               </div>
@@ -58,11 +58,11 @@ export default function ChatbotBanner({ onOpenChat }) {
             >
               {/* Header Bar */}
               <div className="bg-[#800020] text-white p-4 flex items-center gap-3 border-b border-white/10">
-                <div className="w-9 h-9 rounded-full bg-white text-[#800020] font-black text-base flex items-center justify-center shadow-md shrink-0">
+                <div className="w-9 h-9 rounded-full bg-white text-[#800020] font-bold text-base flex items-center justify-center shadow-md shrink-0">
                   G
                 </div>
                 <div>
-                  <div className="font-extrabold text-sm sm:text-base leading-tight">
+                  <div className="font-bold text-sm sm:text-base leading-tight">
                     Gabriela - Asesora Académica
                   </div>
                   <div className="text-[11px] text-white/90 font-medium flex items-center gap-1.5 mt-0.5">
@@ -80,13 +80,13 @@ export default function ChatbotBanner({ onOpenChat }) {
 
                 {/* Quick Action Pill Buttons */}
                 <div className="grid grid-cols-2 gap-2.5">
-                  <button className="bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-extrabold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-colors cursor-pointer text-center">
+                  <button className="bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-colors cursor-pointer text-center">
                     Costos
                   </button>
-                  <button className="bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-extrabold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-colors cursor-pointer text-center">
+                  <button className="bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-colors cursor-pointer text-center">
                     Requisitos
                   </button>
-                  <button className="col-span-2 bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-extrabold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-colors cursor-pointer text-center">
+                  <button className="col-span-2 bg-[#800020]/10 hover:bg-[#800020] text-[#800020] hover:text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-colors cursor-pointer text-center">
                     Prácticas
                   </button>
                 </div>

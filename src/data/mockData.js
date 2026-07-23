@@ -5,7 +5,7 @@ export const INSTITUTE_INFO = {
   accreditation: "Resolución Ministerial R.M. 0040/2025",
   address: "Calle Illampu N° 614 (Esquina Plaza Eguino, Zona El Rosario)",
   city: "La Paz, Bolivia",
-  phones: ["2450031", "72565773"],
+  phones: ["2450031", "72565773", "72004647"],
   whatsapp: "59172565773",
   email: "contacto@senordemayo.edu.bo",
   hours: "Lunes a Viernes: 08:30 a 12:30 | 14:30 a 22:00 (Sábado cerrado)",

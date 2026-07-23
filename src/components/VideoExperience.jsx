@@ -47,13 +47,13 @@ export default function VideoExperience({ onOpenPreRegister, videoUrl }) {
           {/* Left Column: Title, Subtitle & Pre-Inscripción Button */}
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-3">
-              <span className="text-sm font-black text-[#800020] uppercase tracking-widest block">
+              <span className="text-xs font-bold text-[#800020] uppercase tracking-widest block">
                 VIVE LA EXPERIENCIA SEÑOR DE MAYO
               </span>
-              <h2 className="text-4xl sm:text-6xl font-black text-[#1e1b4b] tracking-tight font-heading leading-tight">
+              <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold text-[#1e1b4b] tracking-tight font-heading leading-tight">
                 Conoce de cerca nuestra formación
               </h2>
-              <p className="text-slate-600 text-lg sm:text-xl font-medium leading-relaxed max-w-xl pt-1">
+              <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed max-w-xl pt-1">
                 Un vistazo real al ambiente académico, la energía de nuestros estudiantes y el camino profesional que puedes comenzar aquí.
               </p>
             </div>
@@ -61,7 +61,7 @@ export default function VideoExperience({ onOpenPreRegister, videoUrl }) {
             <div className="pt-2">
               <button
                 onClick={onOpenPreRegister}
-                className="bg-[#800020] hover:bg-[#580016] text-white font-black text-sm uppercase tracking-wider py-4 px-8 rounded-2xl shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer inline-block"
+                className="bg-[#800020] hover:bg-[#580016] text-white font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-2xl shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer inline-block"
               >
                 Quiero pre-inscribirme
               </button>
@@ -102,7 +102,7 @@ export default function VideoExperience({ onOpenPreRegister, videoUrl }) {
 
               {/* Floating Overlay Badge: APRENDIENDO */}
               <div className="absolute bottom-16 left-4 right-4 z-20 flex justify-center">
-                <span className="bg-emerald-600 text-white font-black text-xs uppercase tracking-widest px-4 py-1.5 rounded-lg shadow-lg border border-emerald-400">
+                <span className="bg-emerald-600 text-white font-bold text-[11px] uppercase tracking-widest px-4 py-1.5 rounded-lg shadow-lg border border-emerald-400">
                   APRENDIENDO
                 </span>
               </div>
@@ -111,7 +111,7 @@ export default function VideoExperience({ onOpenPreRegister, videoUrl }) {
               <div className="absolute bottom-4 left-4 right-4 z-20">
                 <button
                   onClick={toggleAudio}
-                  className="w-full bg-[#800020]/90 hover:bg-[#800020] backdrop-blur-md text-white font-black text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-white/20 shadow-lg transition-colors cursor-pointer"
+                  className="w-full bg-[#800020]/90 hover:bg-[#800020] backdrop-blur-md text-white font-bold text-[11px] uppercase tracking-wider py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-white/20 shadow-lg transition-colors cursor-pointer"
                 >
                   {isMuted ? (
                     <>

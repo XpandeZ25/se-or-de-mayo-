@@ -46,13 +46,13 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Section Header */}
         <div className="space-y-3 max-w-3xl">
-          <span className="text-sm font-black text-[#800020] uppercase tracking-widest block">
+          <span className="text-xs font-bold text-[#800020] uppercase tracking-widest block">
             Voces Señor de Mayo
           </span>
-          <h2 className="text-4xl sm:text-6xl font-black text-[#1e1b4b] tracking-tight font-heading">
+          <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold text-[#1e1b4b] tracking-tight font-heading">
             Lo que dicen nuestros estudiantes
           </h2>
-          <p className="text-slate-600 text-lg sm:text-xl font-medium leading-relaxed">
+          <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed">
             Historias reales de confianza, práctica y acompañamiento durante su formación en enfermería.
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
 
                 {/* Quote Icon & Text */}
                 <div className="relative">
-                  <p className="text-slate-700 text-base sm:text-lg font-medium leading-relaxed italic">
+                  <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed italic">
                     "{item.quote}"
                   </p>
                 </div>
@@ -83,10 +83,10 @@ export default function Testimonials() {
               {/* Author Footer */}
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <div className="font-black text-slate-900 text-lg font-heading">
+                  <div className="font-bold text-slate-850 text-base font-heading">
                     {item.author}
                   </div>
-                  <div className="text-xs font-bold text-[#800020] uppercase tracking-wider mt-0.5">
+                  <div className="text-[11px] font-semibold text-[#800020] uppercase tracking-wider mt-0.5">
                     {item.role}
                   </div>
                 </div>

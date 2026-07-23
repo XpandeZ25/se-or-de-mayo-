@@ -125,13 +125,13 @@ export default function Curriculum({ onOpenPreRegister }) {
       {/* SECTION HEADER & TABS */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-sm font-black text-[#800020] uppercase tracking-widest block">
+          <span className="text-xs font-bold text-[#800020] uppercase tracking-widest block">
             FORMACIÓN PROFESIONAL
           </span>
-          <h2 className="text-4xl sm:text-6xl font-black text-[#1e1b4b] tracking-tight font-heading">
+          <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold text-[#1e1b4b] tracking-tight font-heading">
             Currículum Académico
           </h2>
-          <p className="text-slate-600 text-lg sm:text-xl font-medium leading-relaxed">
+          <p className="text-slate-500 text-base sm:text-lg font-medium leading-relaxed">
             Programa académico oficial aprobado y orientado al desarrollo de competencias y la práctica en salud.
           </p>
 
@@ -139,7 +139,7 @@ export default function Curriculum({ onOpenPreRegister }) {
           <div className="flex flex-wrap justify-center gap-3 pt-6">
             <button
               onClick={() => setActiveTab('plan')}
-              className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'plan'
                   ? 'bg-[#800020] text-white shadow-lg scale-102'
                   : 'bg-white text-slate-600 border border-slate-200/80 hover:bg-slate-50'
@@ -149,7 +149,7 @@ export default function Curriculum({ onOpenPreRegister }) {
             </button>
             <button
               onClick={() => setActiveTab('modelo')}
-              className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'modelo'
                   ? 'bg-[#800020] text-white shadow-lg scale-102'
                   : 'bg-white text-slate-600 border border-slate-200/80 hover:bg-slate-50'
@@ -226,13 +226,13 @@ export default function Curriculum({ onOpenPreRegister }) {
           <div id="malla" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-2 max-w-3xl">
-                <span className="text-sm font-black text-[#800020] uppercase tracking-widest block">
+                <span className="text-xs font-bold text-[#800020] uppercase tracking-widest block">
                   PLAN DE ESTUDIOS
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-black text-[#1e1b4b] tracking-tight font-heading">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1e1b4b] tracking-tight font-heading">
                   Malla curricular
                 </h2>
-                <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed pt-1">
+                <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed pt-1">
                   Una vista clara del plan de estudios: módulos, competencias, horas académicas y duración estimada.
                 </p>
               </div>
@@ -243,10 +243,10 @@ export default function Curriculum({ onOpenPreRegister }) {
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black tracking-tight font-heading">
+                  <div className="text-xl sm:text-2xl font-bold tracking-tight font-heading">
                     2.400 h
                   </div>
-                  <div className="text-[10px] sm:text-xs font-black uppercase tracking-wider opacity-90">
+                  <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-90">
                     CARGA TOTAL
                   </div>
                 </div>

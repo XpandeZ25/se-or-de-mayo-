@@ -12,19 +12,19 @@ export default function WhatsAppWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 group flex items-center gap-3 transition-transform duration-300 hover:scale-105"
+      className="fixed bottom-6 right-6 z-40 group flex items-center gap-3 transition-transform duration-300 hover:scale-105"
     >
       {/* Tooltip Popup */}
-      <span className="hidden sm:inline-block bg-slate-900 text-white text-xs font-black px-3.5 py-2 rounded-2xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-slate-700">
+      <span className="hidden sm:inline-block bg-[#141414]/80 text-white text-xs font-bold px-3.5 py-2 rounded-2xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-white/10 backdrop-blur-md">
         ¿Consultas rápidas? Chatea con nosotros 💬
       </span>
 
       {/* Pulsing Outer Glow Ring */}
       <div className="relative flex items-center justify-center">
-        <span className="absolute w-full h-full rounded-full bg-emerald-500/40 animate-ping" />
+        <span className="absolute w-full h-full rounded-full bg-emerald-500/20 animate-ping" />
         
         {/* WhatsApp Floating Button */}
-        <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.5)] border-2 border-white hover:bg-[#20ba59] transition-colors">
+        <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/20 hover:bg-[#25D366] text-emerald-400 hover:text-white flex items-center justify-center shadow-[0_8px_32px_rgba(37,211,102,0.25)] border border-emerald-500/30 hover:border-emerald-400 backdrop-blur-md transition-all duration-300">
           <svg
             className="w-8 h-8 fill-current"
             viewBox="0 0 24 24"

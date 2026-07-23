@@ -26,10 +26,10 @@ export default function LegalGuarantee() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight font-heading text-white">
+          <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold tracking-tight font-heading text-white">
             Respaldo y Garantía Legal
           </h2>
-          <p className="text-white/90 text-base sm:text-lg font-medium leading-relaxed">
+          <p className="text-white/85 text-sm sm:text-base font-medium leading-relaxed">
             Cumplimos con todos los estándares nacionales para tu formación profesional.
           </p>
         </div>
