@@ -24,7 +24,7 @@ export default function About({ missionText, visionText }) {
             ¿Quiénes somos?
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed pt-2">
-            Fundado el 22 de agosto del 2000, el INSTITUTO TÉCNICO "SEÑOR DE MAYO" ha consolidado su prestigio a través de 25 años de dedicación a la formación de profesionales técnicos en salud. Bajo la Resolución Ministerial R.M. 0040/2025, operamos con plena legalidad y excelencia académica.
+            Fundado el 22 de agosto del 2000, el INSTITUTO TÉCNICO "SEÑOR DE MAYO" ha consolidado su prestigio a través de 25 años de dedicación a la formación de profesionales técnicos en salud. Bajo la Resolución Ministerial 051/2001, operamos con plena legalidad y excelencia académica.
           </p>
 
           <button 

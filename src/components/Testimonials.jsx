@@ -6,37 +6,37 @@ export default function Testimonials() {
     {
       id: 1,
       quote: "Al principio tenía miedo de entrar a un hospital, pero en las prácticas los licenciados te van guiando paso a paso. Eso me ayudó muchísimo a agarrar confianza y destreza en cada procedimiento.",
-      author: "María F.",
+      author: "Gladys Choque",
       role: "Primer año"
     },
     {
       id: 2,
       quote: "Me gusta que no todo se queda en teoría. Desde el primer año practicamos, hacemos consultas, nos corrigen con paciencia y uno se siente totalmente preparado para la atención real.",
-      author: "José L.",
+      author: "Jhilmar Condori",
       role: "Segundo año"
     },
     {
       id: 3,
       quote: "Lo que más valoro es el ambiente académico. Hay exigencia en cada materia, sí, pero también un apoyo humano constante. Si pones de tu parte, aquí aprendes de verdad.",
-      author: "Daniela R.",
+      author: "Rosmery Mamani",
       role: "Estudiante en prácticas"
     },
     {
       id: 4,
       quote: "Entré por recomendación de una graduada y me quedé muy tranquila. Me orientaron con los requisitos y los docentes están siempre atentos para resolver cualquier duda.",
-      author: "Camila S.",
+      author: "Limbert Apaza",
       role: "Turno mañana"
     },
     {
       id: 5,
       quote: "Las clases en el laboratorio de simulación me gustaron bastante porque hacemos casos reales y procedimientos intensivos. Ahí entiendes la verdadera importancia de la enfermería.",
-      author: "Kevin M.",
+      author: "Nayra Quispe",
       role: "Turno tarde"
     },
     {
       id: 6,
       quote: "Buscaba una institución seria que me permita superarme y trabajar en salud. El Instituto Señor de Mayo me dio ese impulso profesional que necesitaba para empezar.",
-      author: "Rocío V.",
+      author: "Franz Flores",
       role: "Turno noche"
     }
   ];

@@ -7,7 +7,7 @@ export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
   const [messages, setMessages] = useState([
     {
       sender: 'bot',
-      text: '¡Hola! Bienvenida/o al Instituto Técnico "Señor de Mayo". Soy tu asistente virtual. ¿En qué te puedo asesorar hoy?',
+      text: '¡Hola! Bienvenida/o al Instituto Técnico "Señor de Mayo". Soy Maya, tu asistente virtual. ¿En qué te puedo asesorar hoy?',
       time: 'Ahora'
     }
   ]);
@@ -38,7 +38,7 @@ export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
     if (q.includes('requisito') || q.includes('documento') || q.includes('inscrip')) {
       return "¡Hola! Para inscribirte en el Técnico Medio en Enfermería necesitas: 1) Fotocopia de Cédula de Identidad, 2) Certificado de Nacimiento, 3) Título de Bachiller (fotocopia legalizada) y 4) 4 fotografías 4x4. Te recomiendo acercarte a nuestras oficinas en Calle Illampu N° 614 para una asesoría personalizada. ¿Necesitas saber algo más?";
     } else if (q.includes('donde') || q.includes('quedan') || q.includes('ubicacion') || q.includes('direccion') || q.includes('llegar')) {
-      return "Nuestra Sede Central queda en la ciudad de La Paz: Calle Illampu N° 614 (esquina Plaza Eguino, zona El Rosario). Atendemos de Lunes a Viernes de 08:30 a 12:30 y de 14:30 a 22:00. No atendemos los sábados.";
+      return "Nuestra Sede Central queda en la ciudad de La Paz: Calle Illampu N° 614 (esquina Plaza Eguino, zona El Rosario). Atendemos de Lunes a Viernes de 08:30 a 12:30 y de 14:30 a 22:00.";
     } else if (q.includes('dura') || q.includes('tiempo') || q.includes('duracion') || q.includes('semestre') || q.includes('año')) {
       return "La carrera de Técnico Medio en Enfermería tiene una duración de 2 años (4 semestres académicos) contemplando un total de 2,400 horas de formación teórica, práctica y laboratorio.";
     } else if (q.includes('practica') || q.includes('hospital') || q.includes('internado') || q.includes('convenio')) {
@@ -89,7 +89,7 @@ export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-6 left-6 z-50 bg-[#800020] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl border-2 border-[#d4af37] flex items-center gap-3 hover:scale-105 transition-all group"
-          title="Asistente Virtual Señor de Mayo"
+          title="Maya - Asistente Virtual"
         >
           <div className="relative">
             <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center font-bold">
@@ -115,7 +115,7 @@ export default function ChatbotWidget({ isOpen, setIsOpen, onLogQuery }) {
               </div>
               <div>
                 <h4 className="font-bold text-sm text-white leading-tight flex items-center gap-1.5">
-                  Asistente Señor de Mayo <Sparkles className="w-3.5 h-3.5 text-[#f8e596]" />
+                  Asistente Maya <Sparkles className="w-3.5 h-3.5 text-[#f8e596]" />
                 </h4>
                 <div className="text-[11px] text-gray-200 flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-emerald-400"></span> Responde de inmediato

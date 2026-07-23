@@ -8,7 +8,7 @@ export const INSTITUTE_INFO = {
   phones: ["2450031", "72565773", "72004647"],
   whatsapp: "59172565773",
   email: "contacto@senordemayo.edu.bo",
-  hours: "Lunes a Viernes: 08:30 a 12:30 | 14:30 a 22:00 (Sábado cerrado)",
+  hours: "Lunes a Viernes: 08:30 a 12:30 | 14:30 a 22:00",
   careerName: "Técnico Medio en Enfermería",
   duration: "2 Años (4 Semestres) / 2,400 Horas Académicas",
   degree: "Título Profesional a Nivel Técnico Medio"
