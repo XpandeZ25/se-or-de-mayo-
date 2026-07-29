@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   border: 2px solid var(--color-guindo);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(128, 0, 32, 0.3);
 }
@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   border: 2px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   text-decoration: none;
 }
 
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   text-decoration: none;
   box-shadow: 0 8px 24px rgba(88, 0, 22, 0.25);
 }
@@ -189,4 +189,22 @@ h1, h2, h3, h4, h5, h6 {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Tactile visual feedback on touch/click */
+.btn-primary:active, .btn-secondary:active, .btn-gold:active {
+  transform: scale(0.97);
+}
+
+/* Hardware accelerated scroll reveal entries */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.7s;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

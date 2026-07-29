@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,6 +12,7 @@ import WhatsAppWidget from './components/WhatsAppWidget';
 import PreRegistrationForm from './components/PreRegistrationForm';
 import FacilitiesSection from './components/FacilitiesSection';
 import Testimonials from './components/Testimonials';
+import Recognitions from './components/Recognitions';
 import LocationContact from './components/LocationContact';
 import Footer from './components/Footer';
 import AdminModal from './components/AdminModal';
@@ -47,6 +48,28 @@ export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
+  // Intersection Observer for scroll fade-up animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Trigger animation once
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    const elements = document.querySelectorAll('.fade-in-section');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   const handleRegisterSubmit = (newReg) => {
     setRegistrations([newReg, ...registrations]);
   };
@@ -72,31 +95,55 @@ export default function App() {
       <main className="flex-1">
         <Hero onOpenPreRegister={handleOpenPreRegisterScroll} />
         
-        <About
-          missionText={missionText}
-          visionText={visionText}
-        />
+        <div className="fade-in-section">
+          <About
+            missionText={missionText}
+            visionText={visionText}
+          />
+        </div>
 
-        <Curriculum onOpenPreRegister={handleOpenPreRegisterScroll} />
+        <div className="fade-in-section">
+          <Curriculum onOpenPreRegister={handleOpenPreRegisterScroll} />
+        </div>
 
-        <Hospitals />
+        <div className="fade-in-section">
+          <Hospitals />
+        </div>
 
-        <LegalGuarantee />
+        <div className="fade-in-section">
+          <LegalGuarantee />
+        </div>
 
-        <FacilitiesSection />
+        <div className="fade-in-section">
+          <FacilitiesSection />
+        </div>
 
-        <Testimonials />
+        <div className="fade-in-section">
+          <Testimonials />
+        </div>
 
-        <ChatbotBanner onOpenChat={() => setIsChatOpen(true)} />
+        <div className="fade-in-section">
+          <Recognitions />
+        </div>
 
-        <VideoExperience
-          onOpenPreRegister={handleOpenPreRegisterScroll}
-          videoUrl={videoUrl}
-        />
+        <div className="fade-in-section">
+          <ChatbotBanner onOpenChat={() => setIsChatOpen(true)} />
+        </div>
 
-        <PreRegistrationForm onRegisterSubmit={handleRegisterSubmit} />
+        <div className="fade-in-section">
+          <VideoExperience
+            onOpenPreRegister={handleOpenPreRegisterScroll}
+            videoUrl={videoUrl}
+          />
+        </div>
 
-        <LocationContact />
+        <div className="fade-in-section">
+          <PreRegistrationForm onRegisterSubmit={handleRegisterSubmit} />
+        </div>
+
+        <div className="fade-in-section">
+          <LocationContact />
+        </div>
       </main>
 
       {/* Floating Chatbot Widget */}

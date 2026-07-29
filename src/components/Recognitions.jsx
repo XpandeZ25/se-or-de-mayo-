@@ -1,0 +1,205 @@
+import React, { useState } from 'react';
+import { Award, Eye, X, FileText, Users, Calendar } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { getAssetUrl } from '../lib/utils';
+
+export default function Recognitions() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  const cards = [
+    {
+      url: getAssetUrl('images/reconocimiento_1.jpg'),
+      title: "Certificado Oficial",
+      description: "Otorgado por la Honorable Cámara de Diputados de Bolivia en honor al mérito civil.",
+      badge: "Documento Oficial",
+      badgeColor: "bg-amber-500/10 text-amber-700 border-amber-500/20",
+      imageClass: "w-full h-full object-contain p-4 bg-white"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_2.jpg'),
+      title: "Acto de Entrega",
+      description: "Lic. María del Rosario Rebollo Paz recibiendo la distinción legislativa oficial.",
+      badge: "Ceremonia Protocolar",
+      badgeColor: "bg-[#800020]/10 text-[#800020] border-[#800020]/20",
+      imageClass: "w-full h-full object-cover object-[center_15%]"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_3.jpg'),
+      title: "Respaldo SEDES La Paz",
+      description: "Reconocimiento a la destacada labor en el Programa de Lucha Contra el Cáncer.",
+      badge: "Salud Pública",
+      badgeColor: "bg-emerald-500/10 text-emerald-700 border-emerald-500/20",
+      imageClass: "w-full h-full object-cover object-[center_35%]"
+    }
+  ];
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setIsLightboxOpen(true);
+  };
+
+  return (
+    <section id="reconocimientos" className="py-20 sm:py-24 bg-gradient-to-b from-[#f8fafc] to-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        {/* Section Header & Description */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="lg:col-span-7 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 border border-amber-500/20 text-xs font-bold uppercase tracking-wider">
+              <Award className="w-3.5 h-3.5" />
+              Distinción Legislativa y de Salud
+            </div>
+            <h2 className="text-2xl sm:text-3.5xl lg:text-4.5xl font-extrabold text-[#1e1b4b] tracking-tight font-heading">
+              Nuestros Reconocimientos
+            </h2>
+            <div className="relative bg-[#800020]/5 border-l-4 border-[#800020] p-5 rounded-r-2xl">
+              <p className="text-slate-800 font-medium leading-relaxed text-sm sm:text-base">
+                La <strong className="text-slate-900 font-extrabold">Brigada Parlamentaria de La Paz</strong> y la <strong className="text-slate-900 font-extrabold">Honorable Cámara de Diputados</strong> otorgaron un Reconocimiento Oficial a la <strong className="text-[#800020] font-extrabold">Lic. María del Rosario Rebollo Paz</strong>, gerente propietaria del Instituto Técnico Señor de Mayo, por su destacada labor en el impulso del Programa Departamental de Lucha Contra el Cáncer del SEDES La Paz.
+              </p>
+            </div>
+          </div>
+          <div className="lg:col-span-5 lg:pt-14 space-y-4 text-slate-650 text-sm sm:text-base leading-relaxed">
+            <p>
+              Este reconocimiento resalta su liderazgo, compromiso y aporte al fortalecimiento de la salud pública, promoviendo la prevención, diagnóstico oportuno y atención integral del cáncer en beneficio del Departamento de La Paz y del Estado Plurinacional de Bolivia.
+            </p>
+            <p className="text-slate-500 italic text-xs sm:text-sm">
+              El acto fue respaldado por las firmas y sellos oficiales de la Cámara de Diputados y la Brigada Parlamentaria de La Paz, reafirmando el valor de su contribución al desarrollo social y sanitario del país.
+            </p>
+          </div>
+        </div>
+
+        {/* Premium 3-Column Card Grid (No weird cropping, text readable) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+          {cards.map((card, idx) => (
+            <div 
+              key={idx}
+              className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex flex-col overflow-hidden group hover:-translate-y-1.5"
+            >
+              {/* Image Container with Zoom & Overlay */}
+              <div 
+                onClick={() => openLightbox(idx)}
+                className="relative aspect-[3/4] bg-slate-100 overflow-hidden cursor-zoom-in border-b border-slate-100"
+              >
+                <img
+                  src={card.url}
+                  alt={card.title}
+                  loading="lazy"
+                  decoding="async"
+                  className={`${card.imageClass} transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105`}
+                />
+                
+                {/* Dark Hover Overlay */}
+                <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-slate-900 transform scale-90 group-hover:scale-100 transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                    <Eye className="w-5 h-5" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Text Info Below Image (100% Readable, High Contrast) */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className={`inline-block px-2.5 py-0.5 rounded-full border text-[10px] font-bold uppercase tracking-wider ${card.badgeColor}`}>
+                    {card.badge}
+                  </span>
+                  <h3 className="text-lg font-bold text-slate-850 tracking-tight font-heading group-hover:text-[#800020] transition-colors duration-300">
+                    {card.title}
+                  </h3>
+                  <p className="text-slate-500 text-xs sm:text-sm font-medium leading-relaxed font-sans">
+                    {card.description}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => openLightbox(idx)}
+                  className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-bold text-slate-700 bg-slate-50 hover:bg-[#800020]/10 hover:text-[#800020] border border-slate-200 transition-colors duration-300 cursor-pointer active:scale-[0.97] transform"
+                >
+                  Ampliar Imagen
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Seals & Badges */}
+        <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-4 text-center max-w-3xl mx-auto">
+          <div className="flex flex-col items-center justify-center p-3 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <FileText className="w-6 h-6 text-[#800020] mb-2" />
+            <span className="text-[10px] sm:text-xs font-bold text-slate-800">Cámara de Diputados</span>
+          </div>
+          <div className="flex flex-col items-center justify-center p-3 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <Users className="w-6 h-6 text-amber-600 mb-2" />
+            <span className="text-[10px] sm:text-xs font-bold text-slate-800">Brigada Parl. La Paz</span>
+          </div>
+          <div className="flex flex-col items-center justify-center p-3 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <Calendar className="w-6 h-6 text-emerald-600 mb-2" />
+            <span className="text-[10px] sm:text-xs font-bold text-slate-800">SEDES La Paz</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Lightbox / Zoom Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/95 flex flex-col items-center justify-center p-4 sm:p-8"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsLightboxOpen(false)}
+              className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all border border-white/10 cursor-pointer z-[110] active:scale-[0.97] transform"
+              title="Cerrar modal"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Modal Image Display */}
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              className="relative max-w-4xl max-h-[80vh] w-full flex items-center justify-center"
+            >
+              <img
+                src={cards[activeIndex].url}
+                alt={cards[activeIndex].title}
+                decoding="async"
+                className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+              />
+            </motion.div>
+
+            {/* Caption & Navigation Inside Lightbox */}
+            <div className="mt-6 text-center text-white space-y-2 max-w-xl px-4 z-[105] font-sans">
+              <span className={`px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wider ${cards[activeIndex].badgeColor.replace('/10', '/30')}`}>
+                {cards[activeIndex].badge}
+              </span>
+              <h4 className="text-xl font-bold tracking-tight mt-2">{cards[activeIndex].title}</h4>
+              <p className="text-sm text-slate-300 leading-relaxed font-medium">
+                {cards[activeIndex].description}
+              </p>
+
+              {/* Dot Indicators */}
+              <div className="flex justify-center gap-2 pt-3">
+                {cards.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveIndex(i)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
+                      activeIndex === i ? 'bg-[#800020] w-6' : 'bg-white/40 hover:bg-white/75'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}
