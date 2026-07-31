@@ -73,7 +73,11 @@ export default function Footer({ onOpenAdmin }) {
         {/* Bottom Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <div>© 2026 Instituto Técnico Señor de Mayo. Todos los derechos reservados.</div>
-          <div>Formando líderes en salud en Bolivia.</div>
+          <div className="flex items-center gap-2">
+            <span>Formando líderes en salud en Bolivia.</span>
+            <span className="text-gray-700">|</span>
+            <span>Desarrollado por <span className="font-semibold text-gray-400 hover:text-gray-300 transition-colors">XpandeZ</span></span>
+          </div>
         </div>
       </div>
     </footer>

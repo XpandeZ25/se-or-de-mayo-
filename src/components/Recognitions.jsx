@@ -17,14 +17,6 @@ export default function Recognitions() {
       imageClass: "w-full h-full object-contain p-4 bg-white"
     },
     {
-      url: getAssetUrl('images/reconocimiento_2.jpg'),
-      title: "Acto de Entrega",
-      description: "Lic. María del Rosario Rebollo Paz recibiendo la distinción legislativa oficial.",
-      badge: "Ceremonia Protocolar",
-      badgeColor: "bg-[#800020]/10 text-[#800020] border-[#800020]/20",
-      imageClass: "w-full h-full object-cover object-[center_15%]"
-    },
-    {
       url: getAssetUrl('images/reconocimiento_3.jpg'),
       title: "Respaldo SEDES La Paz",
       description: "Reconocimiento a la destacada labor en el Programa de Lucha Contra el Cáncer.",
@@ -42,7 +34,7 @@ export default function Recognitions() {
   return (
     <section id="reconocimientos" className="py-20 sm:py-24 bg-gradient-to-b from-[#f8fafc] to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        
+
         {/* Section Header & Description */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-7 space-y-4">
@@ -69,15 +61,15 @@ export default function Recognitions() {
           </div>
         </div>
 
-        {/* Premium 3-Column Card Grid (No weird cropping, text readable) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+        {/* Premium 2-Column Card Grid (No weird cropping, text readable) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2 max-w-4xl mx-auto">
           {cards.map((card, idx) => (
-            <div 
+            <div
               key={idx}
               className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex flex-col overflow-hidden group hover:-translate-y-1.5"
             >
               {/* Image Container with Zoom & Overlay */}
-              <div 
+              <div
                 onClick={() => openLightbox(idx)}
                 className="relative aspect-[3/4] bg-slate-100 overflow-hidden cursor-zoom-in border-b border-slate-100"
               >
@@ -88,7 +80,7 @@ export default function Recognitions() {
                   decoding="async"
                   className={`${card.imageClass} transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105`}
                 />
-                
+
                 {/* Dark Hover Overlay */}
                 <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-slate-900 transform scale-90 group-hover:scale-100 transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
@@ -190,9 +182,8 @@ export default function Recognitions() {
                   <button
                     key={i}
                     onClick={() => setActiveIndex(i)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
-                      activeIndex === i ? 'bg-[#800020] w-6' : 'bg-white/40 hover:bg-white/75'
-                    }`}
+                    className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${activeIndex === i ? 'bg-[#800020] w-6' : 'bg-white/40 hover:bg-white/75'
+                      }`}
                   />
                 ))}
               </div>
