@@ -7,7 +7,7 @@ export default function Curriculum({ onOpenPreRegister }) {
   const tableData = [
     { label: "Carrera", value: "Enfermería" },
     { label: "Nivel", value: "Técnico Medio" },
-    { label: "Duración", value: "2 años / 24 meses" },
+    { label: "Duración", value: "2 años / anual" },
     { label: "Modalidad", value: "Presencial (30% teórico - 70% práctico)" },
     { label: "Carga Horaria", value: "2.400 horas académicas" }
   ];

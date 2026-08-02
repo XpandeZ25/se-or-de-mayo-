@@ -33,6 +33,14 @@ export default function LocationContact() {
                   <div className="font-extrabold text-gray-900">Dirección:</div>
                   <p className="text-gray-600">{INSTITUTE_INFO.address}</p>
                   <p className="text-xs text-gray-400 font-semibold">{INSTITUTE_INFO.city}</p>
+                  <a 
+                    href="https://maps.app.goo.gl/8JG3x2Gz7sjrLJrM6" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1 mt-2 text-xs font-black text-[#800020] hover:text-[#580016] transition-colors underline"
+                  >
+                    Ver ubicación en Google Maps (GPS)
+                  </a>
                 </div>
               </div>
 
@@ -62,7 +70,7 @@ export default function LocationContact() {
           <div className="lg:col-span-7 rounded-3xl overflow-hidden shadow-xl border border-gray-200 relative min-h-[400px]">
             <iframe
               title="Ubicación Instituto Señor de Mayo Calle Illampu La Paz"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.438598715104!2d-68.1396!3d-16.4975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf06716035f5%3A0xb7cf405e3f5bfbf6!2sCalle%20Illampu%20614%2C%20La%20Paz%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000!5m2!1ses!2sbo"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.438598715104!2d-68.1407924!3d-16.4940347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDI5JzM4LjUiUyA2OMKwMDgnMjYuOSJX!5e0!3m2!1ses!2sbo!4v1700000000000!5m2!1ses!2sbo"
               className="w-full h-full min-h-[420px] border-0"
               allowFullScreen=""
               loading="lazy"
