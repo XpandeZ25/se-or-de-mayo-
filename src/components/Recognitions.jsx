@@ -14,7 +14,9 @@ export default function Recognitions() {
       description: "Otorgado por la Honorable Cámara de Diputados de Bolivia en honor al mérito civil.",
       badge: "Documento Oficial",
       badgeColor: "bg-amber-500/10 text-amber-700 border-amber-500/20",
-      imageClass: "w-full h-full object-contain p-4 bg-white"
+      imageClass: "w-full h-full object-contain p-4 bg-white",
+      aspectClass: "aspect-[3/4]",
+      category: "documento"
     },
     {
       url: getAssetUrl('images/reconocimiento_3.jpg'),
@@ -22,7 +24,29 @@ export default function Recognitions() {
       description: "Reconocimiento a la destacada labor en el Programa de Lucha Contra el Cáncer.",
       badge: "Salud Pública",
       badgeColor: "bg-emerald-500/10 text-emerald-700 border-emerald-500/20",
-      imageClass: "w-full h-full object-cover object-[center_35%]"
+      imageClass: "w-full h-full object-contain p-4 bg-white",
+      aspectClass: "aspect-[3/4]",
+      category: "documento"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_entrega.jpg'),
+      title: "Ceremonia de Condecoración",
+      description: "La Lic. María del Rosario Revollo Paz recibiendo el reconocimiento por parte de autoridades sanitarias.",
+      badge: "Entrega Oficial",
+      badgeColor: "bg-rose-500/10 text-rose-700 border-rose-500/20",
+      imageClass: "w-full h-full object-cover",
+      aspectClass: "aspect-[4/3]",
+      category: "galeria"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_mesa.jpg'),
+      title: "Mesa de Presídium",
+      description: "Autoridades del SEDES La Paz y de la Cámara de Diputados durante la entrega formal de distinciones.",
+      badge: "Mesa de Honor",
+      badgeColor: "bg-blue-500/10 text-blue-700 border-blue-500/20",
+      imageClass: "w-full h-full object-cover",
+      aspectClass: "aspect-[4/3]",
+      category: "galeria"
     }
   ];
 
@@ -30,6 +54,8 @@ export default function Recognitions() {
     setActiveIndex(index);
     setIsLightboxOpen(true);
   };
+
+  const currentCard = cards[activeIndex] || cards[0];
 
   return (
     <section id="reconocimientos" className="py-20 sm:py-24 bg-gradient-to-b from-[#f8fafc] to-white overflow-hidden">
@@ -47,7 +73,7 @@ export default function Recognitions() {
             </h2>
             <div className="relative bg-[#800020]/5 border-l-4 border-[#800020] p-5 rounded-r-2xl">
               <p className="text-slate-800 font-medium leading-relaxed text-sm sm:text-base">
-                La <strong className="text-slate-900 font-extrabold">Brigada Parlamentaria de La Paz</strong> y la <strong className="text-slate-900 font-extrabold">Honorable Cámara de Diputados</strong> otorgaron un Reconocimiento Oficial a la <strong className="text-[#800020] font-extrabold">Lic. María del Rosario Rebollo Paz</strong>, gerente propietaria del Instituto Técnico Señor de Mayo, por su destacada labor en el impulso del Programa Departamental de Lucha Contra el Cáncer del SEDES La Paz.
+                La <strong className="text-slate-900 font-extrabold">Brigada Parlamentaria de La Paz</strong> y la <strong className="text-slate-900 font-extrabold">Honorable Cámara de Diputados</strong> otorgaron un Reconocimiento Oficial a la <strong className="text-[#800020] font-extrabold">Lic. María del Rosario Revollo Paz</strong>, gerente propietaria del Instituto Técnico Señor de Mayo, por su destacada labor en el impulso del Programa Departamental de Lucha Contra el Cáncer del SEDES La Paz.
               </p>
             </div>
           </div>
@@ -61,58 +87,70 @@ export default function Recognitions() {
           </div>
         </div>
 
-        {/* Premium 2-Column Card Grid (No weird cropping, text readable) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2 max-w-4xl mx-auto">
-          {cards.map((card, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex flex-col overflow-hidden group hover:-translate-y-1.5"
-            >
-              {/* Image Container with Zoom & Overlay */}
-              <div
-                onClick={() => openLightbox(idx)}
-                className="relative aspect-[3/4] bg-slate-100 overflow-hidden cursor-zoom-in border-b border-slate-100"
-              >
-                <img
-                  src={card.url}
-                  alt={card.title}
-                  loading="lazy"
-                  decoding="async"
-                  className={`${card.imageClass} transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105`}
-                />
 
-                {/* Dark Hover Overlay */}
-                <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-slate-900 transform scale-90 group-hover:scale-100 transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-                    <Eye className="w-5 h-5" />
+
+        {/* Premium Card Grid with Layout Animations */}
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2 max-w-4xl mx-auto"
+        >
+          <AnimatePresence mode="popLayout">
+            {cards.map((card, idx) => (
+              <motion.div
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                key={card.url}
+                className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex flex-col overflow-hidden group hover:-translate-y-1.5"
+              >
+                {/* Image Container with Zoom & Overlay */}
+                <div
+                  onClick={() => openLightbox(idx)}
+                  className={`relative ${card.aspectClass || 'aspect-[4/3]'} bg-slate-50 overflow-hidden cursor-zoom-in border-b border-slate-100`}
+                >
+                  <img
+                    src={card.url}
+                    alt={card.title}
+                    loading="lazy"
+                    decoding="async"
+                    className={`${card.imageClass} transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105`}
+                  />
+
+                  {/* Dark Hover Overlay */}
+                  <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-slate-900 transform scale-90 group-hover:scale-100 transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                      <Eye className="w-5 h-5" />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Text Info Below Image (100% Readable, High Contrast) */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
-                  <span className={`inline-block px-2.5 py-0.5 rounded-full border text-[10px] font-bold uppercase tracking-wider ${card.badgeColor}`}>
-                    {card.badge}
-                  </span>
-                  <h3 className="text-lg font-bold text-slate-850 tracking-tight font-heading group-hover:text-[#800020] transition-colors duration-300">
-                    {card.title}
-                  </h3>
-                  <p className="text-slate-500 text-xs sm:text-sm font-medium leading-relaxed font-sans">
-                    {card.description}
-                  </p>
+                {/* Text Info Below Image */}
+                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                  <div className="space-y-2">
+                    <span className={`inline-block px-2.5 py-0.5 rounded-full border text-[10px] font-bold uppercase tracking-wider ${card.badgeColor}`}>
+                      {card.badge}
+                    </span>
+                    <h3 className="text-lg font-bold text-slate-850 tracking-tight font-heading group-hover:text-[#800020] transition-colors duration-300">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-500 text-xs sm:text-sm font-medium leading-relaxed font-sans">
+                      {card.description}
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => openLightbox(idx)}
+                    className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-bold text-slate-700 bg-slate-50 hover:bg-[#800020]/10 hover:text-[#800020] border border-slate-200 transition-colors duration-300 cursor-pointer active:scale-[0.97] transform"
+                  >
+                    Ampliar Imagen
+                  </button>
                 </div>
-
-                <button
-                  onClick={() => openLightbox(idx)}
-                  className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-bold text-slate-700 bg-slate-50 hover:bg-[#800020]/10 hover:text-[#800020] border border-slate-200 transition-colors duration-300 cursor-pointer active:scale-[0.97] transform"
-                >
-                  Ampliar Imagen
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
         {/* Seals & Badges */}
         <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-4 text-center max-w-3xl mx-auto">
@@ -159,8 +197,8 @@ export default function Recognitions() {
               className="relative max-w-4xl max-h-[80vh] w-full flex items-center justify-center"
             >
               <img
-                src={cards[activeIndex].url}
-                alt={cards[activeIndex].title}
+                src={currentCard.url}
+                alt={currentCard.title}
                 decoding="async"
                 className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-white/10"
               />
@@ -168,12 +206,12 @@ export default function Recognitions() {
 
             {/* Caption & Navigation Inside Lightbox */}
             <div className="mt-6 text-center text-white space-y-2 max-w-xl px-4 z-[105] font-sans">
-              <span className={`px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wider ${cards[activeIndex].badgeColor.replace('/10', '/30')}`}>
-                {cards[activeIndex].badge}
+              <span className={`px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wider ${currentCard.badgeColor.replace('/10', '/30')}`}>
+                {currentCard.badge}
               </span>
-              <h4 className="text-xl font-bold tracking-tight mt-2">{cards[activeIndex].title}</h4>
+              <h4 className="text-xl font-bold tracking-tight mt-2">{currentCard.title}</h4>
               <p className="text-sm text-slate-300 leading-relaxed font-medium">
-                {cards[activeIndex].description}
+                {currentCard.description}
               </p>
 
               {/* Dot Indicators */}
