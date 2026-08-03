@@ -113,23 +113,32 @@ export default function About({ missionText, visionText }) {
           </div>
 
           {/* Right Column: Image Showcase with Floating 25+ Badge */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
+          <div className="lg:col-span-5 space-y-6 mt-4 lg:mt-0">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
               <img
                 src={getAssetUrl("images/nursing_practice_lab_guindo.png")}
                 alt="Estudiantes de enfermería Instituto Señor de Mayo"
-                className="w-full h-[480px] sm:h-[540px] object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-[280px] sm:h-[320px] object-cover hover:scale-105 transition-transform duration-700"
               />
 
               {/* Overlapping Bottom-Left Floating Badge */}
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 sm:p-7 rounded-3xl shadow-2xl border-l-4 border-l-[#800020] border border-slate-100 z-20 min-w-[190px]">
-                <div className="text-3xl sm:text-4xl font-bold text-[#800020] font-heading tracking-tight">
+              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border-l-4 border-l-[#800020] border border-slate-100 z-20 min-w-[150px]">
+                <div className="text-2xl sm:text-3xl font-bold text-[#800020] font-heading tracking-tight">
                   +25
                 </div>
-                <div className="text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mt-1">
+                <div className="text-xs font-bold text-slate-700 uppercase tracking-wider mt-0.5">
                   Años educando
                 </div>
               </div>
+            </div>
+
+            {/* Second Image: Building Frontage */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+              <img
+                src={getAssetUrl("images/fachada_instituto.jpg")}
+                alt="Fachada del Instituto Técnico Señor de Mayo"
+                className="w-full h-auto hover:scale-105 transition-transform duration-700"
+              />
             </div>
           </div>
         </div>
