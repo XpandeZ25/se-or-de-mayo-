@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Award, Eye, X, FileText, Users, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { getAssetUrl } from '../lib/utils';
+import { getAssetUrl, cn } from '../lib/utils';
 
 export default function Recognitions() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('todos');
 
   const cards = [
     {
@@ -47,15 +48,49 @@ export default function Recognitions() {
       imageClass: "w-full h-full object-cover",
       aspectClass: "aspect-[4/3]",
       category: "galeria"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_entrega_2.jpg'),
+      title: "Entrega del Reconocimiento",
+      description: "Momento de la entrega de la distinción oficial en las instalaciones del Gobierno Autónomo Departamental de La Paz.",
+      badge: "Acto de Entrega",
+      badgeColor: "bg-purple-500/10 text-purple-700 border-purple-500/20",
+      imageClass: "w-full h-full object-cover",
+      aspectClass: "aspect-[4/3]",
+      category: "galeria"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_autoridades.jpg'),
+      title: "Comitiva Institucional",
+      description: "Autoridades y directivas del Instituto Técnico Señor de Mayo en la ceremonia oficial.",
+      badge: "Autoridades",
+      badgeColor: "bg-indigo-500/10 text-indigo-700 border-indigo-500/20",
+      imageClass: "w-full h-full object-contain p-2 bg-slate-900/5",
+      aspectClass: "aspect-[3/4]",
+      category: "galeria"
+    },
+    {
+      url: getAssetUrl('images/reconocimiento_estudiantes.jpg'),
+      title: "Comunidad Estudiantil",
+      description: "Estudiantes de la carrera de Enfermería participando activamente del acto conmemorativo de condecoración.",
+      badge: "Estudiantes",
+      badgeColor: "bg-[#800020]/10 text-[#800020] border-[#800020]/20",
+      imageClass: "w-full h-full object-cover",
+      aspectClass: "aspect-[4/3]",
+      category: "galeria"
     }
   ];
+
+  const filteredCards = selectedCategory === 'todos'
+    ? cards
+    : cards.filter(card => card.category === selectedCategory);
 
   const openLightbox = (index) => {
     setActiveIndex(index);
     setIsLightboxOpen(true);
   };
 
-  const currentCard = cards[activeIndex] || cards[0];
+  const currentCard = filteredCards[activeIndex] || filteredCards[0];
 
   return (
     <section id="reconocimientos" className="py-20 sm:py-24 bg-gradient-to-b from-[#f8fafc] to-white overflow-hidden">
@@ -89,13 +124,54 @@ export default function Recognitions() {
 
 
 
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 pb-4">
+          {[
+            { id: 'todos', label: 'Todos' },
+            { id: 'documento', label: 'Documentos Oficiales' },
+            { id: 'galeria', label: 'Galería del Acto' }
+          ].map((tab) => {
+            const isActive = selectedCategory === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setSelectedCategory(tab.id);
+                  setActiveIndex(0); // Reset lightbox index when category changes
+                }}
+                className={`relative px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-colors duration-300 cursor-pointer ${
+                  isActive 
+                    ? 'text-white' 
+                    : 'text-slate-600 hover:text-[#800020] bg-slate-50 hover:bg-[#800020]/5 border border-slate-200'
+                }`}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-[#800020] rounded-full"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{tab.label}</span>
+              </button>
+            );
+          })}
+        </div>
+
         {/* Premium Card Grid with Layout Animations */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2 max-w-4xl mx-auto"
+          className={cn(
+            "grid grid-cols-1 gap-8 pt-2 mx-auto",
+            filteredCards.length === 1 
+              ? "max-w-md grid-cols-1" 
+              : filteredCards.length === 2 
+                ? "max-w-3xl md:grid-cols-2" 
+                : "max-w-6xl md:grid-cols-2 lg:grid-cols-3"
+          )}
         >
           <AnimatePresence mode="popLayout">
-            {cards.map((card, idx) => (
+            {filteredCards.map((card, idx) => (
               <motion.div
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -132,7 +208,7 @@ export default function Recognitions() {
                     <span className={`inline-block px-2.5 py-0.5 rounded-full border text-[10px] font-bold uppercase tracking-wider ${card.badgeColor}`}>
                       {card.badge}
                     </span>
-                    <h3 className="text-lg font-bold text-slate-850 tracking-tight font-heading group-hover:text-[#800020] transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-slate-800 tracking-tight font-heading group-hover:text-[#800020] transition-colors duration-300">
                       {card.title}
                     </h3>
                     <p className="text-slate-500 text-xs sm:text-sm font-medium leading-relaxed font-sans">
@@ -216,7 +292,7 @@ export default function Recognitions() {
 
               {/* Dot Indicators */}
               <div className="flex justify-center gap-2 pt-3">
-                {cards.map((_, i) => (
+                {filteredCards.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveIndex(i)}
