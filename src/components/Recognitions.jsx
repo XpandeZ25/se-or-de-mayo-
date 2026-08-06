@@ -31,7 +31,7 @@ export default function Recognitions() {
     },
     {
       url: getAssetUrl('images/reconocimiento_entrega.jpg'),
-      title: "Ceremonia de Condecoración",
+      title: "Ceremonia de Reconocimiento",
       description: "La Lic. María del Rosario Revollo Paz recibiendo el reconocimiento por parte de autoridades sanitarias.",
       badge: "Entrega Oficial",
       badgeColor: "bg-rose-500/10 text-rose-700 border-rose-500/20",
@@ -72,7 +72,7 @@ export default function Recognitions() {
     {
       url: getAssetUrl('images/reconocimiento_estudiantes.jpg'),
       title: "Comunidad Estudiantil",
-      description: "Estudiantes de la carrera de Enfermería participando activamente del acto conmemorativo de condecoración.",
+      description: "Estudiantes de la carrera de Enfermería participando activamente del acto conmemorativo de reconocimiento.",
       badge: "Estudiantes",
       badgeColor: "bg-[#800020]/10 text-[#800020] border-[#800020]/20",
       imageClass: "w-full h-full object-cover",

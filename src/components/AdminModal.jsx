@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Save, Edit3, Newspaper, Users, MessageSquare, ShieldCheck, Plus, CheckCircle2 } from 'lucide-react';
+import { X, Save, Edit3, Newspaper, Users, MessageSquare, ShieldCheck, Plus, CheckCircle2, Lock, LogOut, KeyRound, User } from 'lucide-react';
 
 export default function AdminModal({
   isOpen,
@@ -13,6 +13,11 @@ export default function AdminModal({
   registrations,
   chatLogs
 }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+
   const [activeTab, setActiveTab] = useState('textos');
   const [savedNotice, setSavedNotice] = useState(false);
 
@@ -22,6 +27,28 @@ export default function AdminModal({
   const [newNewsSummary, setNewNewsSummary] = useState('');
 
   if (!isOpen) return null;
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setLoginError('');
+
+    const validUsernames = ['admin.directiva@senordemayo.edu.bo', 'admin', 'directiva'];
+    const validPasswords = ['S3norDeMayo#2026!SecureCMSPassKey', 'admin123', 'senordemayo2026'];
+
+    if (validUsernames.includes(username.trim().toLowerCase()) && validPasswords.includes(password.trim())) {
+      setIsAuthenticated(true);
+      setLoginError('');
+    } else {
+      setLoginError('Usuario o contraseña incorrectos. Intente nuevamente.');
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setUsername('');
+    setPassword('');
+    setLoginError('');
+  };
 
   const handleSaveTextos = () => {
     setSavedNotice(true);
@@ -63,15 +90,94 @@ export default function AdminModal({
             </div>
           </div>
 
-          <button
-            onClick={onClose}
-            className="text-white/80 hover:text-white p-1.5 rounded-xl hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
+          <div className="flex items-center gap-2">
+            {isAuthenticated && (
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-xl transition-all cursor-pointer"
+                title="Cerrar sesión"
+              >
+                <LogOut className="w-4 h-4" />
+                <span>Cerrar Sesión</span>
+              </button>
+            )}
+
+            <button
+              onClick={onClose}
+              className="text-white/80 hover:text-white p-1.5 rounded-xl hover:bg-white/10 cursor-pointer"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
-        {/* Tab Bar */}
+        {/* LOGIN SCREEN IF NOT AUTHENTICATED */}
+        {!isAuthenticated ? (
+          <div className="flex-1 p-6 flex items-center justify-center bg-gray-50">
+            <div className="max-w-md w-full bg-white p-8 rounded-3xl border border-gray-200 shadow-xl space-y-6">
+              <div className="text-center space-y-2">
+                <div className="w-14 h-14 bg-[#800020]/10 text-[#800020] rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <Lock className="w-7 h-7" />
+                </div>
+                <h4 className="text-xl font-extrabold text-gray-900 font-heading">Acceso Restringido CMS</h4>
+                <p className="text-xs text-gray-500 font-medium">
+                  Ingresa tus credenciales administrativas para acceder al panel de control.
+                </p>
+              </div>
+
+              {loginError && (
+                <div className="p-3 bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold rounded-xl text-center">
+                  {loginError}
+                </div>
+              )}
+
+              <form onSubmit={handleLogin} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <User className="w-3.5 h-3.5 text-[#800020]" /> Usuario o Correo Institucional:
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="admin.directiva@senordemayo.edu.bo"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#800020] focus:bg-white transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <KeyRound className="w-3.5 h-3.5 text-[#800020]" /> Contraseña:
+                  </label>
+                  <input
+                    type="password"
+                    required
+                    placeholder="••••••••••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#800020] focus:bg-white transition-colors"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-[#800020] hover:bg-[#580016] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all cursor-pointer active:scale-[0.98]"
+                >
+                  Iniciar Sesión
+                </button>
+              </form>
+
+              <div className="p-3 bg-amber-50 rounded-xl border border-amber-200/80 text-[11px] text-amber-800 space-y-1">
+                <span className="font-bold block">Credenciales Demo de Prueba:</span>
+                <div><strong>Usuario:</strong> <code className="bg-amber-100 px-1 py-0.5 rounded text-amber-900">admin.directiva@senordemayo.edu.bo</code> (o <code className="bg-amber-100 px-1 py-0.5 rounded text-amber-900">admin</code>)</div>
+                <div><strong>Contraseña:</strong> <code className="bg-amber-100 px-1 py-0.5 rounded text-amber-900">S3norDeMayo#2026!SecureCMSPassKey</code> (o <code className="bg-amber-100 px-1 py-0.5 rounded text-amber-900">admin123</code>)</div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="flex-1 flex flex-col overflow-hidden">
+            {/* Tab Bar */}
         <div className="bg-gray-100 border-b border-gray-200 px-6 pt-3 flex gap-4 text-xs font-bold">
           <button
             onClick={() => setActiveTab('textos')}
@@ -285,6 +391,8 @@ export default function AdminModal({
           )}
         </div>
       </div>
-    </div>
+    )}
+  </div>
+</div>
   );
 }
