@@ -135,7 +135,7 @@ export default function About({ missionText, visionText }) {
             {/* Second Image: Building Frontage */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
               <img
-                src={getAssetUrl("images/fachada_instituto.jpg")}
+                src={getAssetUrl("images/fachada_instituto_nueva.jpg")}
                 alt="Fachada del Instituto Técnico Señor de Mayo"
                 className="w-full h-auto hover:scale-105 transition-transform duration-700"
               />
