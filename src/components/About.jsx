@@ -116,9 +116,9 @@ export default function About({ missionText, visionText }) {
           <div className="lg:col-span-5 space-y-6 mt-4 lg:mt-0">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
               <img
-                src={getAssetUrl("images/nursing_practice_lab_guindo.png")}
-                alt="Estudiantes de enfermería Instituto Señor de Mayo"
-                className="w-full h-[280px] sm:h-[320px] object-cover hover:scale-105 transition-transform duration-700"
+                src={getAssetUrl("images/fachada_instituto_nueva.jpg?v=cliente-2026-08-09")}
+                alt="Fachada del Instituto Técnico Señor de Mayo"
+                className="w-full h-[520px] sm:h-[640px] lg:h-[700px] object-cover object-top hover:scale-105 transition-transform duration-700"
               />
 
               {/* Overlapping Bottom-Left Floating Badge */}
@@ -132,14 +132,6 @@ export default function About({ missionText, visionText }) {
               </div>
             </div>
 
-            {/* Second Image: Building Frontage */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
-              <img
-                src={getAssetUrl("images/fachada_instituto_nueva.jpg?v=cliente-2026-08-09")}
-                alt="Fachada del Instituto Técnico Señor de Mayo"
-                className="w-full h-auto object-top hover:scale-105 transition-transform duration-700"
-              />
-            </div>
           </div>
         </div>
       </div>
