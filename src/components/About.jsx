@@ -114,15 +114,15 @@ export default function About({ missionText, visionText }) {
 
           {/* Right Column: Image Showcase with Floating 25+ Badge */}
           <div className="lg:col-span-5 space-y-6 mt-4 lg:mt-0">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <img
                 src={getAssetUrl("images/fachada_instituto_nueva.jpg?v=cliente-2026-08-09")}
                 alt="Fachada del Instituto Técnico Señor de Mayo"
-                className="w-full h-[520px] sm:h-[640px] lg:h-[700px] object-cover object-top hover:scale-105 transition-transform duration-700"
+                className="block w-full h-auto aspect-[718/1024] object-contain"
               />
 
               {/* Overlapping Bottom-Left Floating Badge */}
-              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border-l-4 border-l-[#800020] border border-slate-100 z-20 min-w-[150px]">
+              <div className="sm:absolute sm:bottom-4 sm:left-4 bg-white/95 backdrop-blur-md p-3.5 sm:p-5 shadow-xl border-t sm:border-t-0 border-l-4 border-l-[#800020] border border-slate-100 z-20 sm:min-w-[150px]">
                 <div className="text-2xl sm:text-3xl font-bold text-[#800020] font-heading tracking-tight">
                   +25
                 </div>
